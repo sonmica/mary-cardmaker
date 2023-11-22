@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import type { IconType } from '@/models/IconType';
 import GameIcon from './GameIcon.vue';
 
 defineProps<{
   title: string,
   body: string,
-  iconType: 'crossed-swords' | 'spell-book',
+  iconType: IconType,
 }>();
 </script>
 

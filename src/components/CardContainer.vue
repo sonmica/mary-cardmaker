@@ -6,6 +6,8 @@
   const title2 = "Cast a spell";
   const body2 = "Cast a spell that has a casting time of 1 (or more) actions. If another spell has been cast as a bonus action, only cantrips are allowed.";
   const icon2 = "spell-book";
+
+  
 </script>
 
 <template>

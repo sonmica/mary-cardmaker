@@ -1,0 +1,1 @@
+export type IconType = 'crossed-swords' | 'spell-book';

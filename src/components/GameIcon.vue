@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import type { IconType } from '@/models/IconType';
 import CrossedSwordsIcon from './icons/IconCrossedSwords.vue';
 import SpellBookIcon from './icons/IconSpellBook.vue';
 
 const props = defineProps<{
-    iconType: "crossed-swords" | "spell-book";
+    iconType: IconType;
 }>();
 </script>
 
