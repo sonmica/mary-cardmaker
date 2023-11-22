@@ -11,8 +11,8 @@ defineProps<{
 <template>
   <div class="border rounded-3 p-3">
     <div class="d-flex flex-row align-items-start gap-3" style="width: 36rem">    
-      <div style="width: 9rem">
-        <GameIcon :iconType="iconType" class="card-img-top flex-grow-0 flex-shrink-0"/>
+      <div class="flex-grow-0 flex-shrink-0" style="width: 9rem">
+        <GameIcon :iconType="iconType" class="card-img-top"/>
       </div>
       <div class="card-body">
         <h3 class="card-title text-uppercase">{{title}}</h3>
