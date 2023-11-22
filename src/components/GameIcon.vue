@@ -5,12 +5,9 @@ import SpellBookIcon from './icons/IconSpellBook.vue';
 const props = defineProps<{
     iconType: "crossed-swords" | "spell-book";
 }>();
-
-console.log("props.iconType", props.iconType);
 </script>
 
 <template>
-    <p>{{ iconType }}</p>
-    <CrossedSwordsIcon :v-if="props.iconType === 'crossed-swords'" />
-    <SpellBookIcon :v-if="props.iconType === 'spell-book'" />
+    <CrossedSwordsIcon class="w-100" v-if="props.iconType === 'crossed-swords'" />
+    <SpellBookIcon class="w-100" v-if="props.iconType === 'spell-book'" />
 </template>
