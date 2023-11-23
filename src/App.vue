@@ -13,11 +13,12 @@ import CardContainer from './components/CardContainer.vue';
       <HelloWorld msg="You did it!" />
     </div>
   </header> -->
+  
+  <CardContainer />
 
-  <main>
-    <CardContainer />
-    <!-- <TheWelcome /> -->
-  </main>
+  <!-- <main>
+    <TheWelcome />
+  </main> -->
 </template>
 
 <style scoped>

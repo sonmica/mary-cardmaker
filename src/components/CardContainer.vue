@@ -1,18 +1,29 @@
 <script setup lang="ts">
+  import type CardContent from '@/models/CardContent';
   import CardComponent from './CardComponent.vue';
-  const title = "Attack";
-  const body = "Make an attack with a melee weapon, ranged weapon, improvised weapon, or no weapon.";
-  const icon = "crossed-swords";
-  const title2 = "Cast a spell";
-  const body2 = "Cast a spell that has a casting time of 1 (or more) actions. If another spell has been cast as a bonus action, only cantrips are allowed.";
-  const icon2 = "spell-book";
 
-  
+  const cards: CardContent[] = [
+    {
+      title: "Attack",
+      body: "Make an attack with a melee weapon, ranged weapon, improvised weapon, or no weapon.",
+      iconType: "crossed-swords"
+    },
+    {
+      title: "Cast a spell",
+      body: "Cast a spell that has a casting time of 1 (or more) actions. If another spell has been cast as a bonus action, only cantrips are allowed.",
+      iconType: "spell-book"
+    }
+  ]
+
 </script>
 
-<template>
-  <div class="d-flex flex-column gap-3">
-    <CardComponent :title="title" :body="body" :iconType="icon" />
-    <CardComponent :title="title2" :body="body2" :iconType="icon2" />
+<template>    
+  <div class="d-flex flex-column">
+    <div>
+      <h1>Quick Reference</h1>
+    </div>
+    <div class="d-flex flex-column gap-3 w-100">
+      <CardComponent v-for="card in cards" :title="card.title" :body="card.body" :iconType="card.iconType" />
+    </div>
   </div>
 </template>
