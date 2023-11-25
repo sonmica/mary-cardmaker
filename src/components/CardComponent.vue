@@ -1,18 +1,26 @@
 <script setup lang="ts">
 import type { IconType } from '@/models/IconType';
 import GameIcon from './GameIcon.vue';
+import { computed } from 'vue';
 
-defineProps<{
+const props = defineProps<{
   title: string,
   body: string,
   iconType: IconType,
+  size?: string
 }>();
+
+const iconSize = computed(() => ({
+  'icon-large': props.size && props.size === 'icon-large',
+  'icon-medium': !props.size || props.size === 'icon-medium',
+  'icon-small': props.size && props.size === 'icon-small',
+}));
 </script>
 
 <template>
   <div class="border rounded-3 p-3">
     <div class="d-flex flex-row align-items-start gap-3" style="width: 36rem">    
-      <div class="flex-grow-0 flex-shrink-0" style="width: 9rem">
+      <div class="flex-grow-0 flex-shrink-0" :class="iconSize">
         <GameIcon :iconType="iconType" class="card-img-top"/>
       </div>
       <div class="card-body">
@@ -22,3 +30,17 @@ defineProps<{
     </div>
   </div>
 </template>
+
+<style scoped>
+.icon-large {
+  width: 18rem;
+}
+
+.icon-medium {
+  width: 9rem;
+}
+
+.icon-small {
+  width: 6rem;
+}
+</style>

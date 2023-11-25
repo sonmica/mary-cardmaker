@@ -1,1 +1,9 @@
-export type IconType = 'crossed-swords' | 'spell-book';
+export type IconType =
+  'crossed-swords'
+  | 'extra-time'
+  | 'person'
+  | 'spell-book'
+  | 'swordwoman'
+  | 'talk'
+  | 'walk'
+;
