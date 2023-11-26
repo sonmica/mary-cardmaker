@@ -1,0 +1,50 @@
+{
+  "featureType": "race",
+  "name": "Halfling",
+  "size": "Small",
+  "speed": 25,
+  "features": [
+    {
+      "actionType": "passive",
+      "name": "Lucky",
+      "description": "When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.",
+      "usage": "Any time the condition is met"
+    },
+    {
+      "actionType": "passive",
+      "name": "Brave",
+      "description": "You have advantage on saving throws against being frightened.",
+      "usage": "Any time the condition is met"
+    },
+    {
+      "actionType": "passive",
+      "name": "Halfling Nimbleness",
+      "description": "You can move through the space of any creature that is of a size larger than yours.",
+      "usage": "Any time the condition is met"
+    }
+  ],
+  "subRaces": [
+    {
+      "name": "Lightfoot Halfling",
+      "features": [
+        {
+          "actionType": "passive",
+          "name": "Naturally Stealthy",
+          "description": "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you.",
+          "usage": "Any time the condition is met"
+        }
+      ]
+    },
+    {
+      "name": "Stout Halfling",
+      "features": [
+        {
+          "actionType": "passive",
+          "name": "Stout Resilience",
+          "description": "You have advantage on saving throws against poison, and you have resistance against poison damage.",
+          "usage": "Any time the condition is met"
+        }
+      ]
+    }
+  ]
+}

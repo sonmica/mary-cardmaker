@@ -1,0 +1,25 @@
+[  
+  {
+    "featureType": "class",
+    "name": "Ranger",
+    "featuresByLevel": [
+      {
+        "level": 1,
+        "features": [
+          {
+            "name": "Favored Enemy",
+            "actionType": "passive",
+            "description": "you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy. Choose a type of favored enemy - You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them. You can also choose one language of your choice that is spoken by your favored enemies, if they speak one at all.",
+            "usage": "passive"
+          },
+          {
+            "name": "Natural Explorer",
+            "actionType": "passive",
+            "description": "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain - When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in. Your group also gains benefits while traveling for an hour or more in your favored terrain.",
+            "usage": "Passive"
+          }      
+        ]
+      }
+    ]
+  }
+]

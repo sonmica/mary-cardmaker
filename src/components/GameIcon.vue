@@ -14,11 +14,11 @@ const props = defineProps<{
 </script>
 
 <template>
-    <CrossedSwordsIcon class="w-100" v-if="props.iconType === 'crossed-swords'" />
-    <ExtraTimeIcon class="w-100" v-if="props.iconType === 'extra-time'" />
-    <PersonIcon class="w-100" v-if="props.iconType === 'person'" />
-    <SpellBookIcon class="w-100" v-if="props.iconType === 'spell-book'" />
-    <SwordwomanIcon class="w-100" v-if="props.iconType === 'swordwoman'" />
-    <TalkIcon class="w-100" v-if="props.iconType === 'talk'" />
-    <WalkIcon class="w-100" v-if="props.iconType === 'walk'" />
+  <CrossedSwordsIcon class="w-100" v-if="props.iconType === 'crossed-swords'" />
+  <ExtraTimeIcon class="w-100" v-if="props.iconType === 'extra-time'" />
+  <PersonIcon class="w-100" v-if="props.iconType === 'person'" />
+  <SpellBookIcon class="w-100" v-if="props.iconType === 'spell-book'" />
+  <SwordwomanIcon class="w-100" v-if="props.iconType === 'swordwoman'" />
+  <TalkIcon class="w-100" v-if="props.iconType === 'talk'" />
+  <WalkIcon class="w-100" v-if="props.iconType === 'walk'" />
 </template>
