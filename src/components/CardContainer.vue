@@ -16,30 +16,6 @@
       iconType: "spell-book"
     }
   ];
-
-  const onYourTurnCards: CardContent[] = [
-    {
-      title: "Action",
-      body: "An action such as attack or cast a spell. You may choose to use an action or move first.",
-      iconType: "swordwoman"
-    },
-    {
-      title: "Move",
-      body: "Move a distance up to your speed of [x]. You may choose to use an action or move first, or move then do an action and then move again, up to your base speed.",
-      iconType: "walk"
-    },
-    {
-      title: "Bonus Action",
-      body: "Some class features and spells allow you to make a bonus action, for example many cantrips (zero-th level spells) can be cast as a bonus action.",
-      iconType: "extra-time"
-    },
-    {
-      title: "Free Action",
-      body: "Some actions require neither action nor your move, or can be done while making another action. An example is shouting to communicate to another member, or interacting with an object.",
-      iconType: "talk"
-    },
-  ];
-
 </script>
 
 <template>    
@@ -47,9 +23,20 @@
     <div>
       <h1>Quick Reference</h1>
     </div>
-    <ContentSection sectionTitle="On your turn" :childCards="onYourTurnCards"/>
+    <ContentSection sectionTitle="On your turn" :childCards="commonActions"/>
     <div class="d-flex flex-column gap-3 w-100">
       <CardComponent v-for="card in cards" :key="card.title" :title="card.title" :body="card.body" :iconType="card.iconType" size="icon-small"/>
     </div>
   </div>
 </template>
+
+<script lang="ts">
+  import commonActions from '../assets/data/commonActions.json';
+  export default {
+    data() {
+      return {
+        commonActions: commonActions,
+      };
+    },
+  };
+</script>
