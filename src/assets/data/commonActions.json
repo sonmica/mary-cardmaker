@@ -1,22 +1,109 @@
 [
   {
-    "title": "Action",
-    "body": "An action such as attack or cast a spell. You may choose to use an action or move first.",
-    "iconType": "swordwoman"
+    "sectionId": "onYourTurn",
+    "sectionName": "On your turn",
+    "order": 0,
+    "contents": [
+      {
+        "itemId": "action",
+        "itemName": "Action",
+        "parentId": "onYourTurn",
+        "order": 0,
+        "description": "An action such as attack or cast a spell. You may choose to use an action or move first.",
+        "iconType": "swordwoman"
+      },
+      {
+        "itemId": "move",
+        "itemName": "Move",
+        "parentId": "onYourTurn",
+        "order": 1,
+        "description": "Move a distance up to your speed of [x]. You may choose to use an action or move first, or move then do an action and then move again, up to your base speed.",
+        "iconType": "walk"
+      },
+      {
+        "itemId": "bonusAction",
+        "itemName": "Bonus Action",
+        "parentId": "onYourTurn",
+        "order": 2,
+        "description": "Some class features and spells allow you to make a bonus action, for example many cantrips (zero-th level spells) can be cast as a bonus action.",
+        "iconType": "extra-time"
+      },
+      {
+        "itemId": "freeAction",
+        "itemName": "Free Action",
+        "parentId": "onYourTurn",
+        "order": 3,
+        "description": "Some actions require neither action nor your move, or can be done while making another action. An example is shouting to communicate to another member, or interacting with an object.",
+        "iconType": "talk"
+      }
+    ]
   },
   {
-    "title": "Move",
-    "body": "Move a distance up to your speed of [x]. You may choose to use an action or move first, or move then do an action and then move again, up to your base speed.",
-    "iconType": "walk"
+    "sectionId": "onSomeoneElsesTurn",
+    "sectionName": "On someone else's turn",
+    "order": 1,
+    "contents": [
+      {
+        "sectionId": "reaction",
+        "sectionName": "Reaction",
+        "parentId": "onSomeoneElsesTurn",
+        "order": 0,
+        "description": "Certain special abilities, spells, and situations allow you to take a special action called a reaction. This is an instant response to a trigger of some kind, which can occur on your turn or on someone else's.",
+        "contents": [
+          {
+            "itemId": "attackOfOpportunity",
+            "itemName": "Attack of opportunity",
+            "parentId": "reaction",
+            "order": 0,
+            "description": "If a creature is within your reach and moves away from you, you may make a free attack against it.",
+            "usage": "Any time the condition is met"
+          }
+        ]
+      }
+    ]
   },
   {
-    "title": "Bonus Action",
-    "body": "Some class features and spells allow you to make a bonus action, for example many cantrips (zero-th level spells) can be cast as a bonus action.",
-    "iconType": "extra-time"
+    "sectionId": "commonActions",
+    "sectionName": "Common Actions",
+    "order": 2,
+    "contents": [
+      {
+        "sectionId": "attack",
+        "sectionName": "Attack",
+        "order": 0,
+        "parentId": "commonActions",
+        "description": "",
+        "contents": [
+          {
+            "sectionId": "meleeAttack",
+            "sectionName": "Melee Attack",
+            "order": 0,
+            "parentId": "attack",
+            "description": "Attempt to hit a target using a weapon or weapons that you are wielding (or your fists). Target must be within reach (within [SPEED] feet)."
+          },
+          {
+            "sectionId": "rangedAttack",
+            "sectionName": "On your turn",
+            "order": 1,
+            "parentId": "attack",
+            "description": "Attempt to hit a target using a ranged weapon. Target must be within the range specified by your weapon. Attempting to hit targets further than normal range will incur disadvantage on the to-hit roll."
+          }
+        ]
+      },
+      {
+        "sectionId": "dash",
+        "sectionName": "Dash",
+        "order": 1,
+        "parentId": "commonActions",
+        "description": "Gain extra movement up to your base speed of [SPEED] feet.",
+        "usage": "Once per turn, up to [SPEED] feet"
+      }
+    ]
   },
   {
-    "title": "Free Action",
-    "body": "Some actions require neither action nor your move, or can be done while making another action. An example is shouting to communicate to another member, or interacting with an object.",
-    "iconType": "talk"
+    "sectionId": "onYourTurn",
+    "sectionName": "On your turn",
+    "order": 0,
+    "contents": []
   }
 ]

@@ -2,6 +2,7 @@
   import type CardContent from '@/models/CardContent';
   import CardComponent from './CardComponent.vue';
   import ContentSection from './ContentSection.vue';
+  import Data from '@/assets/data/Data';
 
   // TODO: add a key or id to CardContent
   const cards: CardContent[] = [
@@ -16,6 +17,8 @@
       iconType: "spell-book"
     }
   ];
+
+  console.log("Data", Data);
 </script>
 
 <template>    
