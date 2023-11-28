@@ -2,9 +2,11 @@
   import type CardContent from '@/models/CardContent';
   import CardComponent from './CardComponent.vue';
   import ContentSection from './ContentSection.vue';
-  import Data from '@/assets/data/Data';
+  import { Data } from '@/assets/data/Data';
 
   // TODO: add a key or id to CardContent
+  // TODO: sorting by order of all sections
+  // TODO: templating for [SPEED]
   const cards: CardContent[] = [
     {
       title: "Attack",
@@ -19,6 +21,7 @@
   ];
 
   console.log("Data", Data);
+  console.log("backgrounds", Data.races)
 </script>
 
 <template>    
@@ -26,7 +29,7 @@
     <div>
       <h1>Quick Reference</h1>
     </div>
-    <ContentSection sectionTitle="On your turn" :childCards="commonActions"/>
+    <ContentSection sectionTitle="On your turn" :section="onYourTurnSection"/>
     <div class="d-flex flex-column gap-3 w-100">
       <CardComponent v-for="card in cards" :key="card.title" :title="card.title" :body="card.body" :iconType="card.iconType" size="icon-small"/>
     </div>
@@ -38,8 +41,16 @@
   export default {
     data() {
       return {
-        commonActions: commonActions,
+        backgrounds: Data.backgrounds,
+        classes: Data.classes,
+        commonActions: Data.commonActions,
+        races: Data.races,
       };
     },
+    computed: {
+      onYourTurnSection: function() {
+        return commonActions.find(c => c.id === "onYourTurn") ?? {};
+      }
+    }
   };
 </script>

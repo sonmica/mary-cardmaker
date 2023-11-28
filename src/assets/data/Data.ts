@@ -3,11 +3,9 @@ import Classes from './classes/Classes';
 import commonActions from './commonActions.json';
 import Races from './races/Races';
 
-const Data = {
-  backgrounds: Backgrounds,
-  classes: Classes,
-  commonActions: commonActions,
-  races: Races
-}
-
-export default Data;
+export class Data {
+  public static readonly backgrounds = Backgrounds;
+  public static readonly classes = Classes;
+  public static readonly commonActions = commonActions;
+  public static readonly races = Races;
+};
