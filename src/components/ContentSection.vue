@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import type CardContent from '@/models/CardContent';
 import CardComponent from './CardComponent.vue';
+import type Section from '@/models/Section';
 
-defineProps<{
+const props = defineProps<{
   sectionTitle: string,
-  childCards: CardContent[]
+  section: Section,
 }>();
+
+console.log("content section - child cards", props.section);
 </script>
 
 <template>
@@ -14,6 +16,6 @@ defineProps<{
   </div>
   
   <div class="d-flex flex-column gap-3 w-100">
-      <CardComponent v-for="card in childCards" :key="card.title" :title="card.title" :body="card.body" :iconType="card.iconType" />
-    </div>
+    <CardComponent v-for="card in section.contents" :key="card.id" :title="card.name" :body="card.description" :iconType="card.iconType" :subBody="card.usage ? `Usage: ${card.usage}` : undefined"/>
+  </div>
 </template>

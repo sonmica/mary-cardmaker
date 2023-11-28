@@ -6,6 +6,7 @@ import { computed } from 'vue';
 const props = defineProps<{
   title: string,
   body: string,
+  subBody?: string,
   iconType: IconType,
   size?: string
 }>();
@@ -26,6 +27,7 @@ const iconSize = computed(() => ({
       <div class="card-body">
         <h3 class="card-title text-uppercase">{{title}}</h3>
         <p class="card-text">{{ body }}</p>
+        <p v-if="subBody" class="fw-light fst-italic">{{ subBody }}</p>
       </div>
     </div>
   </div>
