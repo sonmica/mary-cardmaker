@@ -1,4 +1,4 @@
-const Backgrounds = {
+const backgrounds = {
 }
 
-export default Backgrounds;
+export default backgrounds;

@@ -1,11 +1,13 @@
-import Backgrounds from './backgrounds/Backgrounds';
-import Classes from './classes/Classes';
+import backgrounds from './backgrounds/Backgrounds';
+import classes from './classes/Classes';
 import commonActions from './commonActions.json';
-import Races from './races/Races';
+import races from './races/Races';
 
-export class Data {
-  public static readonly backgrounds = Backgrounds;
-  public static readonly classes = Classes;
-  public static readonly commonActions = commonActions;
-  public static readonly races = Races;
+const Data = {
+  backgrounds,
+  classes,
+  commonActions,
+  races
 };
+
+export default Data;

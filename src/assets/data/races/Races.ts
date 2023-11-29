@@ -5,7 +5,7 @@ import halfOrc from './halfOrc.json';
 import human from './human.json';
 import tiefling from './tiefling.json';
 
-const Races = {
+const races = {
   dragonborn: dragonborn,
   elf: elf,
   halfling: halfling,
@@ -14,4 +14,4 @@ const Races = {
   tiefling: tiefling
 }
 
-export default Races;
+export default races;

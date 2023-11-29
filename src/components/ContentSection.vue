@@ -20,7 +20,6 @@ console.log("content section - child cards", props.section);
     <div class="col-6"
         v-for="card in section.contents"
         :key="card.id">
-
       <CardComponent :title="card.name"
         :body="card.description"
         :iconType="card.iconType"
