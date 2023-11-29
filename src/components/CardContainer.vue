@@ -27,7 +27,7 @@
 <template>    
   <div class="row">
     <div>
-      <h1>Quick Reference</h1>
+      <h1 class="text-uppercase">Quick Reference</h1>
     </div>
     <ContentSection sectionTitle="On your turn" :section="onYourTurnSection"/>
     <!-- <div class="d-flex flex-column gap-3 w-100">
@@ -54,3 +54,16 @@
     }
   };
 </script>
+
+<style>
+h1 {
+  font-family: 'wonderful_wilderness_outlinRg', Arial, sans-serif;
+  font-weight:normal;
+  font-style:normal;
+}
+h2, h3 {
+  font-family: 'wonderul_wilderness_filled_Rg', Arial, sans-serif;
+  font-weight:normal;
+  font-style:normal;
+}
+</style>
