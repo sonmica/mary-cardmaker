@@ -20,7 +20,7 @@ const iconSize = computed(() => ({
 
 <template>
   <div class="border rounded-3 p-3">
-    <div class="d-flex flex-row align-items-start gap-3" style="width: 36rem">    
+    <div class="d-flex flex-row align-items-start gap-3">    
       <div class="flex-grow-0 flex-shrink-0" :class="iconSize">
         <GameIcon :iconType="iconType" class="card-img-top"/>
       </div>

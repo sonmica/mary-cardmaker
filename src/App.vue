@@ -3,7 +3,9 @@ import CardContainer from './components/CardContainer.vue';
 </script>
 
 <template>  
-  <CardContainer />
+  <div class="container-lg">
+    <CardContainer />
+  </div>
 </template>
 
 <style scoped>

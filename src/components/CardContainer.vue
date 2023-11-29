@@ -25,7 +25,7 @@
 </script>
 
 <template>    
-  <div class="d-flex flex-column">
+  <div class="row">
     <div>
       <h1>Quick Reference</h1>
     </div>
