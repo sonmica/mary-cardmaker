@@ -30,9 +30,9 @@
       <h1>Quick Reference</h1>
     </div>
     <ContentSection sectionTitle="On your turn" :section="onYourTurnSection"/>
-    <div class="d-flex flex-column gap-3 w-100">
+    <!-- <div class="d-flex flex-column gap-3 w-100">
       <CardComponent v-for="card in cards" :key="card.title" :title="card.title" :body="card.body" :iconType="card.iconType" size="icon-small"/>
-    </div>
+    </div> -->
   </div>
 </template>
 

@@ -15,7 +15,7 @@ console.log("content section - child cards", props.section);
     <h2 class="text-uppercase">{{ sectionTitle }}</h2>
   </div>
   
-  <div class="row g-3">
+  <div class="row g-3 align-items-stretch">
 
     <div class="col-6"
         v-for="card in section.contents"

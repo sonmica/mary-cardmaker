@@ -35,14 +35,14 @@ const iconSize = computed(() => ({
 
 <style scoped>
 .icon-large {
-  width: 18rem;
+  width: 12rem;
 }
 
 .icon-medium {
-  width: 9rem;
+  width: 6rem;
 }
 
 .icon-small {
-  width: 6rem;
+  width: 3rem;
 }
 </style>
