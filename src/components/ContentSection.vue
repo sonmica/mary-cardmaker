@@ -5,7 +5,8 @@ import type Section from '@/models/Section';
 const props = defineProps<{
   sectionTitle: string,
   section: Section,
-  twoColumn?: boolean
+  twoColumn?: boolean,
+  compact?: boolean
 }>();
 
 console.log("content section - child cards", props.section);
@@ -20,12 +21,12 @@ console.log("content section - child cards", props.section);
           :key="card.id"
           class="d-flex flex-column gap-3">
         <CardComponent :title="card.name"
-          class="h-100"
+          :class="{'h-100' : compact}"
           :body="card.description"
           :iconType="card.iconType ?? 'goblin'"
           :subBody="card.usage ? `Usage: ${card.usage}` : undefined"
-          :compact="twoColumn" />
-        <div v-if="card.contents" class="d-flex ps-5">
+          :compact="compact" />
+        <div v-if="card.contents" class="d-flex flex-column ps-5 gap-3">
           <div v-for="subCard in card.contents" :key="subCard.id">            
             <CardComponent :title="subCard.name"
               class="h-100"

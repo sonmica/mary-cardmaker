@@ -49,6 +49,7 @@
         "parentId": "onSomeoneElsesTurn",
         "order": 0,
         "description": "Certain special abilities, spells, and situations allow you to take a special action called a reaction. This is an instant response to a trigger of some kind, which can occur on your turn or on someone else's.",
+        "usage": "Once per turn",
         "contents": [
           {
             "id": "attackOfOpportunity",
@@ -56,7 +57,7 @@
             "parentId": "reaction",
             "order": 0,
             "description": "If a creature is within your reach and moves away from you, you may make a free attack against it.",
-            "usage": "Any time the condition is met"
+            "usage": "Once per turn"
           }
         ]
       }
@@ -72,7 +73,7 @@
         "name": "Attack",
         "order": 0,
         "parentId": "commonActions",
-        "description": "",
+        "description": "Use a weapon (or improvised weapon) to attempt to hit another creature. You must first roll a D20 against the target's AC (Armor Class), and if you are successful you may roll to see how much damage you inflict. The damage is based on your weapon and any bonuses from your class or feats.",
         "contents": [
           {
             "id": "meleeAttack",
@@ -83,7 +84,7 @@
           },
           {
             "id": "rangedAttack",
-            "name": "On your turn",
+            "name": "Ranged Attack",
             "order": 1,
             "parentId": "attack",
             "description": "Attempt to hit a target using a ranged weapon. Target must be within the range specified by your weapon. Attempting to hit targets further than normal range will incur disadvantage on the to-hit roll."
@@ -95,7 +96,7 @@
         "name": "Dash",
         "order": 1,
         "parentId": "commonActions",
-        "description": "Gain extra movement up to your base speed of [SPEED] feet.",
+        "description": "Gain extra movement up to your base speed of [SPEED] feet. This effectively allows you to move twice as much in a turn, at the cost of not being able to do any other actions (like attack).",
         "usage": "Once per turn, up to [SPEED] feet"
       }
     ]

@@ -1,41 +1,23 @@
 <script setup lang="ts">
-  import type CardContent from '@/models/CardContent';
-  import CardComponent from './CardComponent.vue';
   import ContentSection from './ContentSection.vue';
   import Data from '@/assets/data/Data';
 
   // TODO: add a key or id to CardContent
   // TODO: sorting by order of all sections
   // TODO: templating for [SPEED]
-  const cards: CardContent[] = [
-    {
-      title: "Attack",
-      body: "Make an attack with a melee weapon, ranged weapon, improvised weapon, or no weapon.",
-      iconType: "crossed-swords"
-    },
-    {
-      title: "Cast a spell",
-      body: "Cast a spell that has a casting time of 1 (or more) actions. If another spell has been cast as a bonus action, only cantrips are allowed.",
-      iconType: "spell-book"
-    }
-  ];
-
-  console.log("Data", Data);
-  console.log("backgrounds", Data.races)
 </script>
 
 <template>    
-  <div class="row">
+  <div class="d-flex flex-column gap-5">
     <div>
       <h1 class="text-uppercase">Quick Reference</h1>
     </div>
     <div class="grid-container-2col gap-3">
-      <ContentSection sectionTitle="On your turn" :section="onYourTurnSection" twoColumn />
+      <ContentSection sectionTitle="On your turn" :section="onYourTurnSection" twoColumn compact />
       <ContentSection sectionTitle="On someone else's turn" :section="onSomeoneElsesTurnSection"/>
     </div>
-    <!-- <div class="d-flex flex-column gap-3 w-100">
-      <CardComponent v-for="card in cards" :key="card.title" :title="card.title" :body="card.body" :iconType="card.iconType" size="icon-small"/>
-    </div> -->
+
+    <ContentSection sectionTitle="Common actions" :section="commonActionsSection" twoColumn />
   </div>
 </template>
 
@@ -56,6 +38,9 @@
       },
       onSomeoneElsesTurnSection: function() {
         return commonActions.find(c => c.id === "onSomeoneElsesTurn") ?? {};
+      },
+      commonActionsSection: function() {
+        return commonActions.find(c => c.id === "commonActions") ?? {};
       }
     }
   };

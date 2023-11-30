@@ -8,7 +8,8 @@ const props = defineProps<{
   body: string,
   subBody?: string,
   iconType: IconType,
-  size?: string
+  size?: string,
+  compact?: boolean
 }>();
 
 const iconSize = computed(() => ({
@@ -19,16 +20,22 @@ const iconSize = computed(() => ({
 </script>
 
 <template>
-  <div class="border rounded-3 p-3">
+  <div class="border rounded-3 p-3" :class="compact ? 'd-flex flex-column gap-3' : ''">
     <div class="d-flex flex-row align-items-start gap-3">    
       <div class="flex-grow-0 flex-shrink-0" :class="iconSize">
         <GameIcon :iconType="iconType" class="card-img-top"/>
       </div>
       <div class="card-body">
         <h3 class="card-title text-uppercase">{{title}}</h3>
-        <div class="card-text">{{ body }}</div>
-        <div v-if="subBody" class="fw-light fst-italic mt-3">{{ subBody }}</div>
+        <div v-if="!compact">
+          <div class="card-text">{{ body }}</div>
+          <div v-if="subBody" class="fw-light fst-italic mt-3">{{ subBody }}</div>
+        </div>
       </div>
+    </div>      
+    <div v-if="compact">
+      <div class="card-text">{{ body }}</div>
+      <div v-if="subBody" class="fw-light fst-italic mt-3">{{ subBody }}</div>
     </div>
   </div>
 </template>
