@@ -26,8 +26,8 @@ const iconSize = computed(() => ({
       </div>
       <div class="card-body">
         <h3 class="card-title text-uppercase">{{title}}</h3>
-        <p class="card-text">{{ body }}</p>
-        <p v-if="subBody" class="fw-light fst-italic">{{ subBody }}</p>
+        <div class="card-text">{{ body }}</div>
+        <div v-if="subBody" class="fw-light fst-italic mt-3">{{ subBody }}</div>
       </div>
     </div>
   </div>
