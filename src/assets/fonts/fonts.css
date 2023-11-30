@@ -11,9 +11,6 @@
 
 }
 
-
-
-
 @font-face {
   font-family: 'wonderul_wilderness_filled_Rg';
   src: url('wonderul_wilderness_filled_font-webfont.woff2') format('woff2'),
@@ -23,8 +20,14 @@
 
 }
 
+@font-face {
+  font-family: 'wonderful_wilderness_outlinRg';
+  src: url('wonderful_wilderness_outline_font-webfont.woff2') format('woff2'),
+       url('wonderful_wilderness_outline_font-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
-
+}
 
 @font-face {
   font-family: 'wonderful_wilderness_outlinRg';
@@ -35,13 +38,37 @@
 
 }
 
+@font-face {
+  font-family: 'amaranthbold';
+  src: url('amaranth-bold-webfont.woff2') format('woff2'),
+       url('amaranth-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
 
-
+}
 
 @font-face {
-  font-family: 'wonderful_wilderness_outlinRg';
-  src: url('wonderful_wilderness_outline_font-webfont.woff2') format('woff2'),
-       url('wonderful_wilderness_outline_font-webfont.woff') format('woff');
+  font-family: 'amaranthbold_italic';
+  src: url('amaranth-bolditalic-webfont.woff2') format('woff2'),
+       url('amaranth-bolditalic-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'amaranthitalic';
+  src: url('amaranth-italic-webfont.woff2') format('woff2'),
+       url('amaranth-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'amaranthregular';
+  src: url('amaranth-regular-webfont.woff2') format('woff2'),
+       url('amaranth-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 

@@ -54,16 +54,3 @@
     }
   };
 </script>
-
-<style>
-h1 {
-  font-family: 'wonderful_wilderness_outlinRg', Arial, sans-serif;
-  font-weight:normal;
-  font-style:normal;
-}
-h2, h3 {
-  font-family: 'wonderul_wilderness_filled_Rg', Arial, sans-serif;
-  font-weight:normal;
-  font-style:normal;
-}
-</style>

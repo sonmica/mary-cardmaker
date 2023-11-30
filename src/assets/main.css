@@ -28,3 +28,18 @@ a,
     place-items: center;
   }
 }
+
+h1 {
+  font-family: 'wonderful_wilderness_outlinRg', Arial, sans-serif;
+  font-weight:normal;
+  font-style:normal;
+  font-size: 5rem;
+}
+h2, h3 {
+  font-family: 'wonderul_wilderness_filled_Rg', Arial, sans-serif;
+  font-weight:normal;
+  font-style:normal;
+}
+h2 {
+  font-size: 4rem;
+}
