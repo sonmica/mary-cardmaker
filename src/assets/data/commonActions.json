@@ -53,7 +53,7 @@
         "contents": [
           {
             "id": "attackOfOpportunity",
-            "name": "Attack of opportunity",
+            "name": "Reaction: Attack of opportunity",
             "parentId": "reaction",
             "order": 0,
             "description": "If a creature is within your reach and moves away from you, you may make a free attack against it.",
@@ -77,14 +77,14 @@
         "contents": [
           {
             "id": "meleeAttack",
-            "name": "Melee Attack",
+            "name": "Attack: Melee",
             "order": 0,
             "parentId": "attack",
             "description": "Attempt to hit a target using a weapon or weapons that you are wielding (or your fists). Target must be within reach (within [SPEED] feet)."
           },
           {
             "id": "rangedAttack",
-            "name": "Ranged Attack",
+            "name": "Attack: Ranged",
             "order": 1,
             "parentId": "attack",
             "description": "Attempt to hit a target using a ranged weapon. Target must be within the range specified by your weapon. Attempting to hit targets further than normal range will incur disadvantage on the to-hit roll."
