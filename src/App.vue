@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import CardContainer from './components/CardContainer.vue';
+import MainContainer from './components/MainContainer.vue';
 </script>
 
 <template>  
   <div class="container-lg">
-    <CardContainer />
+    <MainContainer />
   </div>
 </template>
 
