@@ -8,8 +8,8 @@
 </script>
 
 <template>    
-  <div class="d-flex flex-column gap-5">
-    <div>
+  <div class="d-flex flex-column gap-3">
+    <div class="text-center">
       <h1 class="text-uppercase">Quick Reference</h1>
     </div>
     <div class="grid-container-2col gap-3">
