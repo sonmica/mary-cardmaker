@@ -1,10 +1,6 @@
 <script setup lang="ts">
   import ContentSection from './ContentSection.vue';
   import Data from '@/assets/data/Data';
-
-  // TODO: add a key or id to CardContent
-  // TODO: sorting by order of all sections
-  // TODO: templating for [SPEED]
 </script>
 
 <template>    
