@@ -29,7 +29,10 @@
     <div>
       <h1 class="text-uppercase">Quick Reference</h1>
     </div>
-    <ContentSection sectionTitle="On your turn" :section="onYourTurnSection"/>
+    <div class="grid-container-2col gap-3">
+      <ContentSection sectionTitle="On your turn" :section="onYourTurnSection" twoColumn />
+      <ContentSection sectionTitle="On someone else's turn" :section="onSomeoneElsesTurnSection"/>
+    </div>
     <!-- <div class="d-flex flex-column gap-3 w-100">
       <CardComponent v-for="card in cards" :key="card.title" :title="card.title" :body="card.body" :iconType="card.iconType" size="icon-small"/>
     </div> -->
@@ -50,6 +53,9 @@
     computed: {
       onYourTurnSection: function() {
         return commonActions.find(c => c.id === "onYourTurn") ?? {};
+      },
+      onSomeoneElsesTurnSection: function() {
+        return commonActions.find(c => c.id === "onSomeoneElsesTurn") ?? {};
       }
     }
   };
