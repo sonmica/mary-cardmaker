@@ -14,6 +14,8 @@
     </div>
 
     <ContentSection sectionTitle="Common actions" :section="commonActionsSection" twoColumn />
+
+    <ContentSection sectionTitle="More actions" :section="moreActionsSection" twoColumn />
   </div>
 </template>
 
@@ -37,6 +39,9 @@
       },
       commonActionsSection: function() {
         return commonActions.find(c => c.id === "commonActions") ?? {};
+      },
+      moreActionsSection: function() {
+        return commonActions.find(c => c.id === "moreActions") ?? {};
       }
     }
   };

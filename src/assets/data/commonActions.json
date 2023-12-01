@@ -98,13 +98,70 @@
         "parentId": "commonActions",
         "description": "Gain extra movement up to your base speed of [SPEED] feet. This effectively allows you to move twice as much in a turn, at the cost of not being able to do any other actions (like attack).",
         "usage": "Once per turn, up to [SPEED] feet"
+      },
+      {
+        "id": "castSpell",
+        "name": "Cast a spell",
+        "order": 2,
+        "parentId": "commonActions",
+        "description": "Cast a spell from your available spell slots, or from your list of memorised spells. Check the information for each spell, as a spell has its own range and cast time. Most spells require 1 action to cast, some (especially most cantrips) only require a bonus action to cast.",
+        "usage": "Once per turn"
       }
     ]
   },
   {
-    "id": "placeholder",
-    "name": "placeholder",
+    "id": "moreActions",
+    "name": "More Actions",
     "order": 3,
-    "contents": []
+    "contents": [
+      {
+        "id": "dodge",
+        "name": "Dodge",
+        "order": 0,
+        "parentId": "moreActions",
+        "description": "When you take the Dodge action, you focus entirely on avoiding attacks. Until the start of your next turn, any attack roll made against you has disadvantage if you can see the attacker, and you make Dexterity saving throws with advantage.",
+        "usage": "Once per turn"
+      },
+      {
+        "id": "help",
+        "name": "Help",
+        "order": 1,
+        "parentId": "moreActions",
+        "description": "You can lend your aid to another creature in the completion of a task. When you take the Help action, the creature you aid gains advantage on the next ability check it makes to perform the task you are helping with. Alternatively, you can aid a friendly creature in attacking a creature within 5 feet of you. You feint, distract the target, or in some other way team up to make your ally's attack more effective.",
+        "usage": "Once per turn"
+      },
+      {
+        "id": "hide",
+        "name": "Hide",
+        "order": 2,
+        "parentId": "moreActions",
+        "description": "When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide. If you succeed, you gain certain benefits.",
+        "usage": "Once per turn"
+      },
+      {
+        "id": "ready",
+        "name": "Ready",
+        "order": 3,
+        "parentId": "moreActions",
+        "description": "This action allows you to delay your turn, or in other words this allows you to act later in the round using your reaction. First you must decide on the trigger for your turn, then you decide on the action you will take in response to that action. For example: 'If the cultist steps on the trapdoor, I'll pull the lever that opens it'. When the trigger occurs, you can either take your reaction right after the trigger finishes or ignore the trigger.",
+        "usage": "Once per turn"
+      },
+      {
+        "id": "search",
+        "name": "Search",
+        "order": 4,
+        "parentId": "moreActions",
+        "description": "Devote your entire attention to finding something. Depending on the nature of the search, you may need to make further skill check (such as Wisdom - Perception or Intelligence - Investigation).",
+        "usage": "Once per turn"
+      },
+      {
+        "id": "useObject",
+        "name": "Use an object",
+        "order": 5,
+        "parentId": "moreActions",
+        "description": "This action is performed when an object requires your entire attention to interact with it, such as pulling a lever. You normally interact with an object while doing something else, such as drawing a sword as part of an attack. You can also perform this action if you want to interact with more than one object on your turn.",
+        "usage": "Once per turn"
+      }
+    ]
   }
 ]

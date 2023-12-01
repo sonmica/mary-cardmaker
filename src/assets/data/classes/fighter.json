@@ -15,7 +15,7 @@
           {
             "name": "Fighting Style",
             "actionType": "passive",
-            "description": "You adopt a particular style of fighting as your specialty. You can’t take a Fighting Style option more than once, even if you later get to choose again.",
+            "description": "You adopt a particular style of fighting as your specialty. You can't take a Fighting Style option more than once, even if you later get to choose again.",
             "usage": "Passive"
           }      
         ],
