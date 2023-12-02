@@ -74,6 +74,7 @@
         "order": 0,
         "parentId": "commonActions",
         "description": "Use a weapon (or improvised weapon) to attempt to hit another creature. You must first roll a D20 against the target's AC (Armor Class), and if you are successful you may roll to see how much damage you inflict. The damage is based on your weapon and any bonuses from your class or feats.",
+        "iconType": "crossed-swords",
         "contents": [
           {
             "id": "meleeAttack",
@@ -87,7 +88,8 @@
             "name": "Attack: Ranged",
             "order": 1,
             "parentId": "attack",
-            "description": "Attempt to hit a target using a ranged weapon. Target must be within the range specified by your weapon. Attempting to hit targets further than normal range will incur disadvantage on the to-hit roll."
+            "description": "Attempt to hit a target using a ranged weapon. Target must be within the range specified by your weapon. Attempting to hit targets further than normal range will incur disadvantage on the to-hit roll.",
+            "iconType": "high-shot"
           }
         ]
       },
@@ -161,6 +163,13 @@
         "parentId": "moreActions",
         "description": "This action is performed when an object requires your entire attention to interact with it, such as pulling a lever. You normally interact with an object while doing something else, such as drawing a sword as part of an attack. You can also perform this action if you want to interact with more than one object on your turn.",
         "usage": "Once per turn"
+      },
+      {
+        "id": "improvise",
+        "name": "Improvise",
+        "order": 6,
+        "parentId": "moreActions",
+        "description": "Attempt to do something else not listed here, at your DM's discretion!"
       }
     ]
   }
