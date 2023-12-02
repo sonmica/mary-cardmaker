@@ -8,7 +8,7 @@ let baseTypes = `export type IconType =`;
 
 const generateIconFile = svg => {
     const baseName = svg.substring(0, svg.length - 4);
-    const contents =  `<template>${readFileSync(svg, 'utf-8')}</template>`;
+    const contents =  `<template>${readFileSync(`${ICONS_FOLDER}/${svg}`, 'utf-8')}</template>`;
 
     baseTypes += `\n  | '${baseName}'`
 
