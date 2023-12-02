@@ -32,6 +32,7 @@ console.log("content section - child cards", props.section);
               class="h-100"
               :body="subCard.description"
               :iconType="subCard.iconType ?? 'goblin'"
+              size="icon-small"
               :subBody="subCard.usage ? `Usage: ${subCard.usage}` : undefined"/>
           </div>
         </div>

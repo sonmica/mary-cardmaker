@@ -1,7 +1,8 @@
 export type IconType =
-  'crossed-swords'
+  | 'crossed-swords'
   | 'extra-time'
   | 'goblin'
+  | 'high-shot'
   | 'person'
   | 'spell-book'
   | 'swordwoman'
