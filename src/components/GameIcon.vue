@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IconType } from '@/models/IconType'
+import type { IconType } from '@/models/IconType';
 
 import CrossedSwordsIcon from './icons/IconCrossedSwords.vue';
 import ExtraTimeIcon from './icons/IconExtraTime.vue';
