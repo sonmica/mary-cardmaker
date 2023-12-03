@@ -1,0 +1,12 @@
+[{
+  "id": "martin",
+  "playerName": "Martin",
+  "characterName": "Feng",
+  "classes": [
+    "classId": "fighter",
+    "level": 1,
+    "playerId": "martin",
+    "subClassFeature": "fightingStyleProtection"
+  ],
+  "raceId": "halfOrc"
+}]
