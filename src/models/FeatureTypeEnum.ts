@@ -1,4 +1,4 @@
-export enum FeatureType {
-  "race",
-  "class"
+export enum FeatureTypeEnum {
+  Race = "RACE",
+  Class = "CLASS"
 }

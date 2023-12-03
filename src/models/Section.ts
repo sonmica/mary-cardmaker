@@ -1,6 +1,6 @@
 export default interface Section {
   id: string;
-  sectionName: string;
+  name: string;
   order: number,
   parentId?: string;
   description?: string;

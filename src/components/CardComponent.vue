@@ -6,7 +6,7 @@ import { computed } from 'vue';
 const props = defineProps<{
   title: string,
   body: string,
-  subBody?: string,
+  subBody?: string | string[],
   iconType: IconType,
   size?: string,
   compact?: boolean
@@ -29,16 +29,37 @@ const iconSize = computed(() => ({
         <h3 class="card-title text-uppercase">{{title}}</h3>
         <div v-if="!compact">
           <div class="card-text">{{ body }}</div>
-          <div v-if="subBody" class="fw-light fst-italic mt-3">{{ subBody }}</div>
+          <div v-if="subBody" class="mt-3">
+            <div v-for="(item, index) in subBodyItems" :key="index" class="fw-light fst-italic">{{ item }}</div>
+          </div>
         </div>
       </div>
     </div>      
     <div v-if="compact">
       <div class="card-text">{{ body }}</div>
-      <div v-if="subBody" class="fw-light fst-italic mt-3">{{ subBody }}</div>
+      <div v-if="subBody" class="mt-3">
+        <div v-for="(item, index) in subBodyItems" :key="index" class="fw-light fst-italic">{{ item }}</div>
+      </div>
     </div>
   </div>
 </template>
+
+<script lang="ts">
+export default {
+    data() {},
+    computed: {
+      subBodyItems: function() {
+        if(!this.subBody) {
+          return [];
+        }
+        if(typeof this.subBody === "string") {
+          return [this.subBody];
+        }
+        return this.subBody;
+      }
+    }
+  }
+</script>
 
 <style scoped>
 .icon-large {
