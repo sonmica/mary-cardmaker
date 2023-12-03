@@ -17,8 +17,9 @@ coverage
 /cypress/videos/
 /cypress/screenshots/
 
-/icons-source
-/icons
+icons-source/
+icons/
+icon-components/
 
 # Editor directories and files
 .vscode/*
