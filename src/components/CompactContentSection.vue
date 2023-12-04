@@ -21,7 +21,7 @@ console.log("content section - child cards", props.section);
         <CardComponent :title="card.name"
           class="h-100"
           :body="card.description"
-          :iconType="card.iconType ?? 'goblin'"
+          :iconType="card.iconType"
           :subBody="card.usage ? `Usage: ${card.usage}` : undefined"
           compact />
         <div v-if="card.contents" class="d-flex flex-column ps-5 gap-3">
@@ -29,7 +29,7 @@ console.log("content section - child cards", props.section);
             <CardComponent :title="subCard.name"
               class="h-100"
               :body="subCard.description"
-              :iconType="subCard.iconType ?? 'goblin'"
+              :iconType="subCard.iconType"
               size="icon-small"
               :subBody="subCard.usage ? `Usage: ${subCard.usage}` : undefined"/>
           </div>

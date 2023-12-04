@@ -14,44 +14,44 @@ defineProps<{
 <template>
   <div class="d-flex flex-column border border-3 rounded-3 p-3">
     <h2 class="text-uppercase text-center">{{ sectionTitle }}</h2>
-    <h3 class="text-uppercase text-center pt-4">Active Skills</h3>
-    <div class="gap-3" :class="twoColumn ? 'grid-container-2col' : 'd-flex flex-column'">
+    <h3 v-if="nonPassives.length > 0" class="text-uppercase text-center pt-4">Active Skills</h3>
+    <div v-if="nonPassives.length > 0" class="gap-3" :class="twoColumn ? 'grid-container-2col' : 'd-flex flex-column'">
       <div
           v-for="card in nonPassives"
           :key="card.id"
           class="d-flex flex-column gap-3">
         <CardComponent :title="card.name"
           :body="card.description ?? ''"
-          :iconType="card.iconType as IconType ?? 'goblin'"
+          :iconType="card.iconType as IconType"
           :subBody="subText(card)" />
         <div v-if="card.contents" class="d-flex flex-column ps-5 gap-3">
           <div v-for="subCard in card.contents" :key="subCard.id">            
             <CardComponent :title="subCard.name"
               class="h-100"
               :body="subCard.description"
-              :iconType="subCard.iconType ?? 'goblin'"
+              :iconType="subCard.iconType"
               size="icon-small"
               :subBody="subText(subCard)"/>
           </div>
         </div>
       </div>    
     </div>
-    <h3 class="text-uppercase text-center pt-4">Passive Skills</h3>
-    <div class="gap-3" :class="twoColumn ? 'grid-container-2col' : 'd-flex flex-column'">
+    <h3 v-if="passives.length > 0" class="text-uppercase text-center pt-4">Passive Skills</h3>
+    <div v-if="passives.length > 0" class="gap-3" :class="twoColumn ? 'grid-container-2col' : 'd-flex flex-column'">
       <div
           v-for="card in passives"
           :key="card.id"
           class="d-flex flex-column gap-3">
         <CardComponent :title="card.name"
           :body="card.description ?? ''"
-          :iconType="card.iconType as IconType ?? 'goblin'"
+          :iconType="card.iconType as IconType"
           :subBody="subText(card)" />
         <div v-if="card.contents" class="d-flex flex-column ps-5 gap-3">
           <div v-for="subCard in card.contents" :key="subCard.id">            
             <CardComponent :title="subCard.name"
               class="h-100"
               :body="subCard.description"
-              :iconType="subCard.iconType ?? 'goblin'"
+              :iconType="subCard.iconType"
               size="icon-small"
               :subBody="subText(subCard)"/>
           </div>
