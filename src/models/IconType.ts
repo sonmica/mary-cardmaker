@@ -12,6 +12,10 @@ export const IconTypeArray = [
   'divert',
   'egyptian-walk',
   'extra-time',
+  'fairy',
+  'fairy-2',
+  'fish-monster',
+  'forest-camp',
   'goblin',
   'healing',
   'high-shot',
@@ -27,6 +31,7 @@ export const IconTypeArray = [
   'swordwoman',
   'sword-clash',
   'talk',
+  'tree-face',
   'walk',
 ] as const;
 export type IconType = typeof IconTypeArray[number];

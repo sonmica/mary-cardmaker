@@ -1,12 +1,30 @@
-[{
-  "id": "martin",
-  "playerName": "Martin",
-  "characterName": "Feng",
-  "classes": [
-    "classId": "fighter",
-    "level": 1,
-    "playerId": "martin",
-    "subClassFeature": "fightingStyleProtection"
-  ],
-  "raceId": "halfOrc"
-}]
+[
+  {
+    "id": "martin",
+    "playerName": "Martin",
+    "characterName": "Feng Bloodcape",
+    "raceId": "halfOrc",
+    "classes": [
+      {   
+        "classId": "fighter",
+        "level": 1,
+        "playerId": "martin",
+        "subClassFeature": "fightingStyleProtection"
+      }
+    ]
+  },
+  {
+    "id": "cameron",
+    "playerName": "Cameron",
+    "characterName": "Haldir Oakenshade",
+    "raceId": "elf",
+    "subRaceId": "elfWoodElf",
+    "classes": [
+      {
+        "classId": "ranger",
+        "level": 1,
+        "playerId": "cameron"
+      }
+    ]
+  }
+]

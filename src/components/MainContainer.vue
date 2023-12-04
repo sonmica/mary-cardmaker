@@ -1,11 +1,12 @@
 <script setup lang="ts">
-  import type { FeatureGroup } from '@/models/FeatureGroup';
   import CompactContentSection from './CompactContentSection.vue';
   import ContentSection from './ContentSection.vue';
   import LeftRightContentSection from './LeftRightContentSection.vue';
   import FeatureGroupSection from './FeatureGroupSection.vue';
 
   import Data from '@/assets/data/Data';
+  import type Feature from '@/models/Feature';
+  import type Section from '@/models/Section';
 </script>
 
 <template>    
@@ -20,7 +21,12 @@
 
     <LeftRightContentSection sectionTitle="Common actions" :section="commonActionsSection" twoColumn :leftColumnIds="['attack']"/>
 
-    <FeatureGroupSection :sectionTitle="`Actions for: Lv ${level} ${races[raceId].name} ${classId}`" :features="personalActionsSection" twoColumn />
+    <FeatureGroupSection
+      :section-title="`Features for: ${currentPlayer?.characterName}`"
+      :section-sub-title="`${race} ${classId} Lv ${level}`"
+      :features="personalActionsSection"
+      twoColumn
+    />
     
     <ContentSection sectionTitle="More actions" :section="moreActionsSection" twoColumn />
   </div>
@@ -34,32 +40,58 @@
         classes: Data.classes,
         commonActions: Data.commonActions,
         races: Data.races,
-        classId: "fighter",
-        level: 1,
-        raceId: "halfOrc",
-        subClassFeature: "fightingStyleProtection"
+        currentPlayer: Data.players.find(p => p.id === "cameron")
       };
     },
     computed: {
-      onYourTurnSection: function() {
-        return this.commonActions.find((c: any) => c.id === "onYourTurn");
+      onYourTurnSection: function(): Section {
+        return this.commonActions.find((c: any) => c.id === "onYourTurn") as Section;
       },
-      onSomeoneElsesTurnSection: function() {
-        return this.commonActions.find((c: any) => c.id === "onSomeoneElsesTurn");
+      onSomeoneElsesTurnSection: function(): Section {
+        return this.commonActions.find((c: any) => c.id === "onSomeoneElsesTurn") as Section;
       },
-      commonActionsSection: function() {
-        return this.commonActions.find((c: any) => c.id === "commonActions");
+      commonActionsSection: function(): Section {
+        return this.commonActions.find((c: any) => c.id === "commonActions") as Section;
       },
-      moreActionsSection: function() {
-        return this.commonActions.find((c: any) => c.id === "moreActions");
+      moreActionsSection: function(): Section {
+        return this.commonActions.find((c: any) => c.id === "moreActions") as Section;
+      },
+      race: function() {
+        return this.currentPlayer?.raceId;
+      },
+      subRace: function() {
+        return this.currentPlayer?.subRaceId;
+      },
+      class: function () {
+        // TODO: allow for multiple classes, currently this just gets the first class
+        return this.currentPlayer?.classes[0];
+      },
+      classId: function () {
+        return this.class?.classId;
+      },
+      level: function () {
+        return this.class?.level;
       },
       personalActionsSection: function() {
-        const raceFeatures = this.races[this.raceId].features;
+        const raceFeatures = this.races[this.race].features;
+        if(this.races[this.race].subRaces && this.subRace) {
+          const currentSubRace = this.races[this.race].subRaces.find((r: Feature) => r.id === this.subRace);
+          if(currentSubRace) {
+            currentSubRace.features.forEach((feat: Feature) => raceFeatures.push(feat));
+          }
+        }
+
         const levelFeatures = this.classes[this.classId].featuresByLevel.find(fbl => fbl.level === this.level);
         const classFeatures = levelFeatures?.features ?? [];
-        const classSubFeatures = levelFeatures?.subFeatures.find(sf => sf.id === this.subClassFeature);
 
-        const splicedFeatures = [...raceFeatures, ...classFeatures, classSubFeatures];
+        const splicedFeatures = [...raceFeatures, ...classFeatures];
+        
+        if(levelFeatures?.subFeatures) {
+          const classSubFeatures = levelFeatures?.subFeatures.find((sf: Feature) => sf.id === this.class.subClassFeature);
+          if(classSubFeatures) {
+            splicedFeatures.push(classSubFeatures);
+          }
+        }
 
         console.log("classFeatures", classFeatures);
         console.log("splicedFeatures", splicedFeatures);

@@ -9,6 +9,7 @@ export interface FeatureGroup {
   speed?: number;
   featuresByLevel?: FeatureByLevel[];
   features?: Feature[];
+  subRaces?: FeatureGroup[];
 }
 
 export interface FeatureByLevel {

@@ -26,7 +26,7 @@ const iconSize = computed(() => ({
         <GameIcon :iconType="iconType" class="card-img-top"/>
       </div>
       <div class="card-body">
-        <h3 class="card-title text-uppercase">{{title}}</h3>
+        <h4 class="card-title text-uppercase">{{title}}</h4>
         <div v-if="!compact">
           <div class="card-text">{{ body }}</div>
           <div v-if="subBody" class="mt-3">

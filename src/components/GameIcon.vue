@@ -15,6 +15,10 @@ import DespairIcon from './icons/IconDespair.vue';
 import DivertIcon from './icons/IconDivert.vue';
 import EgyptianWalkIcon from './icons/IconEgyptianWalk.vue';
 import ExtraTimeIcon from './icons/IconExtraTime.vue';
+import FairyIcon from './icons/IconFairy.vue';
+import Fairy2Icon from './icons/IconFairy2.vue';
+import FishMonsterIcon from './icons/IconFishMonster.vue';
+import ForestCampIcon from './icons/IconForestCamp.vue';
 import GoblinIcon from './icons/IconGoblin.vue';
 import HealingIcon from './icons/IconHealing.vue';
 import HighShotIcon from './icons/IconHighShot.vue';
@@ -30,46 +34,51 @@ import SurprisedIcon from './icons/IconSurprised.vue';
 import SwordClashIcon from './icons/IconSwordClash.vue';
 import SwordwomanIcon from './icons/IconSwordwoman.vue';
 import TalkIcon from './icons/IconTalk.vue';
+import TreeFaceIcon from './icons/IconTreeFace.vue';
 import WalkIcon from './icons/IconWalk.vue';
 
-const props = defineProps<{
+defineProps<{
   iconType: IconType
-}>()
-
-
+}>();
 </script>
 
 <template>
   <GoblinIcon class="w-100" v-if="!isValidIcon" />
-  <AttachedShieldIcon class="w-100" v-if="isValidIcon && props.iconType === 'attached-shield'" />
-  <AcrobaticIcon class="w-100" v-if="isValidIcon && props.iconType === 'acrobatic'" />
-  <BackPainIcon class="w-100" v-if="isValidIcon && props.iconType === 'back-pain'" />
-  <BladeDragIcon class="w-100" v-if="isValidIcon && props.iconType === 'blade-drag'" />
-  <ClawSlashesIcon class="w-100" v-if="isValidIcon && props.iconType === 'claw-slashes'" />
-  <ConvinceIcon class="w-100" v-if="isValidIcon && props.iconType === 'convince'" />
-  <CrossedSwordsIcon class="w-100" v-if="isValidIcon && props.iconType === 'crossed-swords'" />
-  <DaggersIcon class="w-100" v-if="isValidIcon && props.iconType === 'daggers'" />
-  <DespairIcon class="w-100" v-if="isValidIcon && props.iconType === 'despair'" />
-  <ExtraTimeIcon class="w-100" v-if="isValidIcon && props.iconType === 'extra-time'" />
-  <GoblinIcon class="w-100" v-if="isValidIcon && props.iconType === 'goblin'" />
-  <HealingIcon class="w-100" v-if="isValidIcon && props.iconType === 'healing'" />
-  <HighShotIcon class="w-100" v-if="isValidIcon && props.iconType === 'high-shot'" />
-  <PersonIcon class="w-100" v-if="isValidIcon && props.iconType === 'person'" />
-  <SpellBookIcon class="w-100" v-if="isValidIcon && props.iconType === 'spell-book'" />
-  <SwordwomanIcon class="w-100" v-if="isValidIcon && props.iconType === 'swordwoman'" />
-  <TalkIcon class="w-100" v-if="isValidIcon && props.iconType === 'talk'" />
-  <WalkIcon class="w-100" v-if="isValidIcon && props.iconType === 'walk'" />
-  <BoltSpellCastIcon class="w-100" v-if="isValidIcon && props.iconType === 'bolt-spell-cast'" />
-  <DivertIcon class="w-100" v-if="isValidIcon && props.iconType === 'divert'" />
-  <ShieldBashIcon class="w-100" v-if="isValidIcon && props.iconType === 'shield-bash'" />
-  <SunglassesIcon class="w-100" v-if="isValidIcon && props.iconType === 'sunglasses'" />
-  <SurprisedIcon class="w-100" v-if="isValidIcon && props.iconType === 'surprised'" />
-  <SwordClashIcon class="w-100" v-if="isValidIcon && props.iconType === 'sword-clash'" />
-  <EgyptianWalkIcon class="w-100" v-if="isValidIcon && props.iconType === 'egyptian-walk'" />
-  <InvisibleIcon class="w-100" v-if="isValidIcon && props.iconType === 'invisible'" />
-  <MagnifyingGlassIcon class="w-100" v-if="isValidIcon && props.iconType === 'magnifying-glass'" />
-  <PlayerTimeIcon class="w-100" v-if="isValidIcon && props.iconType === 'player-time'" />
-  <PullIcon class="w-100" v-if="isValidIcon && props.iconType === 'pull'" />
+  
+  <AttachedShieldIcon class="w-100" v-if="isValidIcon && iconType === 'attached-shield'" />
+  <AcrobaticIcon class="w-100" v-if="isValidIcon && iconType === 'acrobatic'" />
+  <BackPainIcon class="w-100" v-if="isValidIcon && iconType === 'back-pain'" />
+  <BladeDragIcon class="w-100" v-if="isValidIcon && iconType === 'blade-drag'" />
+  <ClawSlashesIcon class="w-100" v-if="isValidIcon && iconType === 'claw-slashes'" />
+  <ConvinceIcon class="w-100" v-if="isValidIcon && iconType === 'convince'" />
+  <CrossedSwordsIcon class="w-100" v-if="isValidIcon && iconType === 'crossed-swords'" />
+  <DaggersIcon class="w-100" v-if="isValidIcon && iconType === 'daggers'" />
+  <DespairIcon class="w-100" v-if="isValidIcon && iconType === 'despair'" />
+  <DivertIcon class="w-100" v-if="isValidIcon && iconType === 'divert'" />
+  <ExtraTimeIcon class="w-100" v-if="isValidIcon && iconType === 'extra-time'" />
+  <FairyIcon class="w-100" v-if="isValidIcon && iconType === 'fairy'" />
+  <Fairy2Icon class="w-100" v-if="isValidIcon && iconType === 'fairy-2'" />
+  <FishMonsterIcon class="w-100" v-if="isValidIcon && iconType === 'fish-monster'" />
+  <ForestCampIcon class="w-100" v-if="isValidIcon && iconType === 'forest-camp'" />
+  <GoblinIcon class="w-100" v-if="isValidIcon && iconType === 'goblin'" />
+  <HealingIcon class="w-100" v-if="isValidIcon && iconType === 'healing'" />
+  <HighShotIcon class="w-100" v-if="isValidIcon && iconType === 'high-shot'" />
+  <PersonIcon class="w-100" v-if="isValidIcon && iconType === 'person'" />
+  <SpellBookIcon class="w-100" v-if="isValidIcon && iconType === 'spell-book'" />
+  <SwordwomanIcon class="w-100" v-if="isValidIcon && iconType === 'swordwoman'" />
+  <BoltSpellCastIcon class="w-100" v-if="isValidIcon && iconType === 'bolt-spell-cast'" />
+  <ShieldBashIcon class="w-100" v-if="isValidIcon && iconType === 'shield-bash'" />
+  <SunglassesIcon class="w-100" v-if="isValidIcon && iconType === 'sunglasses'" />
+  <SurprisedIcon class="w-100" v-if="isValidIcon && iconType === 'surprised'" />
+  <SwordClashIcon class="w-100" v-if="isValidIcon && iconType === 'sword-clash'" />
+  <EgyptianWalkIcon class="w-100" v-if="isValidIcon && iconType === 'egyptian-walk'" />
+  <InvisibleIcon class="w-100" v-if="isValidIcon && iconType === 'invisible'" />
+  <MagnifyingGlassIcon class="w-100" v-if="isValidIcon && iconType === 'magnifying-glass'" />
+  <PlayerTimeIcon class="w-100" v-if="isValidIcon && iconType === 'player-time'" />
+  <PullIcon class="w-100" v-if="isValidIcon && iconType === 'pull'" />
+  <TreeFaceIcon class="w-100" v-if="isValidIcon && iconType === 'tree-face'" />
+  <TalkIcon class="w-100" v-if="isValidIcon && iconType === 'talk'" />
+  <WalkIcon class="w-100" v-if="isValidIcon && iconType === 'walk'" />
 </template>
 
 <script lang="ts">
@@ -77,8 +86,8 @@ const props = defineProps<{
     computed: {
       isValidIcon: function() {
         // Check if the icon has been imported already otherwise output to console so we can manually do it
-        if(IconTypeArray.indexOf(props.iconType as IconType) === -1) {
-          console.log(`Found icon to import: ${props.iconType}`);
+        if(IconTypeArray.indexOf(this.iconType as IconType) === -1) {
+          console.log(`Found icon to import: ${this.iconType}`);
           return false;
         }
         return true;

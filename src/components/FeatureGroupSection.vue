@@ -6,6 +6,7 @@ import { ActionTypeEnum } from '@/models/ActionTypeEnum';
 
 defineProps<{
   sectionTitle: string,
+  sectionSubTitle?: string,
   features: Feature[],
   twoColumn?: boolean
 }>();
@@ -14,7 +15,8 @@ defineProps<{
 <template>
   <div class="d-flex flex-column border border-3 rounded-3 p-3">
     <h2 class="text-uppercase text-center">{{ sectionTitle }}</h2>
-    <h3 v-if="nonPassives.length > 0" class="text-uppercase text-center pt-4">Active Skills</h3>
+    <h3 v-if="sectionSubTitle" class="text-uppercase text-center">{{ sectionSubTitle }}</h3>
+    <h4 v-if="nonPassives.length > 0" class="text-uppercase text-center pt-4">Active Skills</h4>
     <div v-if="nonPassives.length > 0" class="gap-3" :class="twoColumn ? 'grid-container-2col' : 'd-flex flex-column'">
       <div
           v-for="card in nonPassives"
@@ -36,7 +38,7 @@ defineProps<{
         </div>
       </div>    
     </div>
-    <h3 v-if="passives.length > 0" class="text-uppercase text-center pt-4">Passive Skills</h3>
+    <h4 v-if="passives.length > 0" class="text-uppercase text-center pt-4">Passive Skills</h4>
     <div v-if="passives.length > 0" class="gap-3" :class="twoColumn ? 'grid-container-2col' : 'd-flex flex-column'">
       <div
           v-for="card in passives"
