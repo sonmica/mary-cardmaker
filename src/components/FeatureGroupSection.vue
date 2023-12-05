@@ -68,11 +68,7 @@ export default {
     data() {},
     computed: {
       passives: function() {
-        const c = this.features.filter(f => f.actionType.toUpperCase() === ActionTypeEnum.Passive);
-        console.log("features", this.features);
-        console.log("ActionTypeEnum", ActionTypeEnum.Passive);
-        console.log("passives", c);
-        return c;
+        return this.features.filter(f => f.actionType.toUpperCase() === ActionTypeEnum.Passive);
       },
       nonPassives: function() {
         return this.features.filter(f => f.actionType.toUpperCase() !== ActionTypeEnum.Passive);
@@ -85,18 +81,24 @@ export default {
     },
     methods: {
       subText: function(feature: Feature) {
-        // combine: ActionType, Usage, Conditions, Source
+        // combine: ActionType, Usage, Conditions, Source, SpellInfo
         const subTextArray = [];
         subTextArray.push(`Action Type: ${feature.actionType.toString().toUpperCase()}`);
-        if(feature.usage) {
-          subTextArray.push(`Usage: ${feature.usage}`);
-        }
         if(feature.conditions && feature.conditions.length > 0) {
           feature.conditions.forEach(cond => subTextArray.push(`Condition: ${cond}`));
         }
         if(feature.featureType) {
           subTextArray.push(`Source: ${feature.featureType.toString().toUpperCase()}(${feature.parentId?.toUpperCase()})`);
         }
+
+        const simpleText = ["Usage", "Range", "Components", "Duration"];
+        simpleText.forEach(st => {
+          const stKey = st.toLowerCase();
+          if(feature[stKey]) {
+            subTextArray.push(`${st}: ${feature[stKey]}`);
+          }
+        });
+
         return subTextArray;
       }
     }

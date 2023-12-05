@@ -26,5 +26,18 @@
         "playerId": "cameron"
       }
     ]
+  },
+  {
+    "id": "juancho",
+    "playerName": "Juancho",
+    "characterName": "Possession",
+    "raceId": "tiefling",
+    "classes": [
+      {
+        "classId": "bard",
+        "level": 1,
+        "playerId": "juancho"
+      }
+    ]
   }
 ]

@@ -13,5 +13,8 @@ export default interface Feature {
   contents?: any[];
   iconType?: string;
   usage?: string;
+  duration?: string;
+  components?: string;
+  range?: string;
   conditions?: string[];
 }

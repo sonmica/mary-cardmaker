@@ -25,10 +25,13 @@ import HighShotIcon from './icons/IconHighShot.vue';
 import InvisibleIcon from './icons/IconInvisible.vue';
 import MagnifyingGlassIcon from './icons/IconMagnifyingGlass.vue';
 import PersonIcon from './icons/IconPerson.vue';
+import PianistIcon from './icons/IconPianist.vue';
 import PlayerTimeIcon from './icons/IconPlayerTime.vue';
 import PullIcon from './icons/IconPull.vue';
+import PyromaniacIcon from './icons/IconPyromaniac.vue';
 import ShieldBashIcon from './icons/IconShieldBash.vue';
 import SpellBookIcon from './icons/IconSpellBook.vue';
+import SparkSpiritIcon from './icons/IconSparkSpirit.vue';
 import SunglassesIcon from './icons/IconSunglasses.vue';
 import SurprisedIcon from './icons/IconSurprised.vue';
 import SwordClashIcon from './icons/IconSwordClash.vue';
@@ -79,6 +82,9 @@ defineProps<{
   <TreeFaceIcon class="w-100" v-if="isValidIcon && iconType === 'tree-face'" />
   <TalkIcon class="w-100" v-if="isValidIcon && iconType === 'talk'" />
   <WalkIcon class="w-100" v-if="isValidIcon && iconType === 'walk'" />
+  <PianistIcon class="w-100" v-if="isValidIcon && iconType === 'pianist'" />
+  <PyromaniacIcon class="w-100" v-if="isValidIcon && iconType === 'pyromaniac'" />
+  <SparkSpiritIcon class="w-100" v-if="isValidIcon && iconType === 'spark-spirit'" />
 </template>
 
 <script lang="ts">
@@ -87,7 +93,9 @@ defineProps<{
       isValidIcon: function() {
         // Check if the icon has been imported already otherwise output to console so we can manually do it
         if(IconTypeArray.indexOf(this.iconType as IconType) === -1) {
-          console.log(`Found icon to import: ${this.iconType}`);
+          if(this.iconType) {
+            console.log(`Found icon to import: ${this.iconType}`);
+          }
           return false;
         }
         return true;

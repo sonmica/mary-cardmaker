@@ -1,0 +1,42 @@
+{
+  "id": "bard",
+  "featureType": "class",
+  "name": "Bard",
+  "featuresByLevel": [
+    {
+      "level": 1,
+      "parentId": "bard",
+      "features": [
+        {
+          "id": "spellcasting",
+          "name": "Spellcasting",
+          "actionType": "passive",
+          "parentId": "bard",
+          "featureType": "class",
+          "level": 1,
+          "order": 0,
+          "description": "You are able to cast spells, as per the general spellcasting rules and using spells from the bard spell list.",
+          "usage": "passive",
+          "iconType": "bolt-spell-cast"
+        },
+        {
+          "id": "bardicInspirationD6",
+          "name": "Bardic Inspiration (D6)",
+          "actionType": "bonusAction",
+          "parentId": "bard",
+          "featureType": "class",
+          "level": 1,
+          "order": 1,
+          "description": "Inspire a creature, they gain one Bardic Inspiration die, a d6. The creature can roll the die and add the number rolled to an ability check, attack roll, or saving throw it makes. The creature can wait until after rolling the d20 before deciding to use the Bardic Inspiration die, but must decide before the DM says whether the roll succeeds or fails. The die is consumed regardless of the outcome.",
+          "usage": "[CHA modifier] times per long rest, lasts for 10 minutes",
+          "duration": "10 minutes or until the die roll is used",
+          "conditions": [
+            "Cannot cast on self",
+            "Target is within 60 feet of you and can hear you"
+          ],
+          "iconType": "pianist"
+        }      
+      ]
+    }
+  ]
+}

@@ -28,7 +28,7 @@
           "level": 1,
           "order": 1,
           "description": "You adopt a particular style of fighting as your specialty. You can't take a Fighting Style option more than once, even if you later get to choose again.",
-          "usage": "Passive",
+          "usage": "passive",
           "iconType": "daggers"
         }      
       ],
