@@ -28,14 +28,15 @@
   ],
   "subRaces": [
     {
-      "id": "elfWoodElf",
+      "id": "woodElf",
+      "parentId": "elf",
       "featureType": "race",
       "name": "Wood Elf",
       "speed": 35,
       "features": [
         {
           "id": "maskOfTheWild",
-          "parentId": "elfWoodElf",
+          "parentId": "woodElf",
           "featureType": "race",
           "actionType": "passive",
           "name": "Mask of the Wild",

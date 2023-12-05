@@ -18,7 +18,7 @@
     "playerName": "Cameron",
     "characterName": "Haldir Oakenshade",
     "raceId": "elf",
-    "subRaceId": "elfWoodElf",
+    "subRaceId": "woodElf",
     "classes": [
       {
         "classId": "ranger",
@@ -37,6 +37,20 @@
         "classId": "bard",
         "level": 1,
         "playerId": "juancho"
+      }
+    ]
+  },
+  {
+    "id": "gab",
+    "playerName": "Gab",
+    "characterName": "Arilienne Nimblewillow",
+    "raceId": "halfling",
+    "subRaceId": "lightfootHalfling",
+    "classes": [
+      {
+        "classId": "ranger",
+        "level": 1,
+        "playerId": "gab"
       }
     ]
   }

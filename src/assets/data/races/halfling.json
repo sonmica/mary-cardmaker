@@ -1,48 +1,75 @@
 {
+  "id": "halfling",
   "featureType": "race",
   "name": "Halfling",
   "size": "Small",
   "speed": 25,
   "features": [
     {
+      "id": "lucky",
+      "parentId": "halfling",
+      "featureType": "race",
       "actionType": "passive",
       "name": "Lucky",
       "description": "When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.",
-      "usage": "Any time the condition is met"
+      "usage": "Any time the condition is met",
+      "iconType": "clover-2"
     },
     {
+      "id": "brave",
+      "parentId": "halfling",
+      "featureType": "race",
       "actionType": "passive",
       "name": "Brave",
       "description": "You have advantage on saving throws against being frightened.",
-      "usage": "Any time the condition is met"
+      "usage": "Any time the condition is met",
+      "iconType": "heart-inside"
     },
     {
+      "id": "halflingNimbleness",
+      "parentId": "halfling",
+      "featureType": "race",
       "actionType": "passive",
       "name": "Halfling Nimbleness",
       "description": "You can move through the space of any creature that is of a size larger than yours.",
-      "usage": "Any time the condition is met"
+      "usage": "Any time the condition is met",
+      "iconType": "giant"
     }
   ],
   "subRaces": [
     {
+      "id": "lightfootHalfling",
+      "parentId": "halfling",
+      "featureType": "race",
       "name": "Lightfoot Halfling",
       "features": [
         {
+          "id": "naturallyStealthy",
+          "parentId": "lightfootHalfling",
+          "featureType": "race",
           "actionType": "passive",
           "name": "Naturally Stealthy",
           "description": "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you.",
-          "usage": "Any time the condition is met"
+          "usage": "Any time the condition is met",
+          "iconType": "cowled"
         }
       ]
     },
     {
+      "id": "stoutHalfling",
+      "parentId": "halfling",
+      "featureType": "race",
       "name": "Stout Halfling",
       "features": [
         {
+          "id": "stoutResilience",
+          "parentId": "lightfootHalfling",
+          "featureType": "race",
           "actionType": "passive",
           "name": "Stout Resilience",
           "description": "You have advantage on saving throws against poison, and you have resistance against poison damage.",
-          "usage": "Any time the condition is met"
+          "usage": "Any time the condition is met",
+          "iconType": "muscular-torso"
         }
       ]
     }

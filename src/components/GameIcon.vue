@@ -8,7 +8,10 @@ import BackPainIcon from './icons/IconBackPain.vue';
 import BladeDragIcon from './icons/IconBladeDrag.vue';
 import BoltSpellCastIcon from './icons/IconBoltSpellCast.vue';
 import ClawSlashesIcon from './icons/IconClawSlashes.vue';
+import CloverIcon from './icons/IconClover.vue';
+import Clover2Icon from './icons/IconClover2.vue';
 import ConvinceIcon from './icons/IconConvince.vue';
+import CowledIcon from './icons/IconCowled.vue';
 import CrossedSwordsIcon from './icons/IconCrossedSwords.vue';
 import DaggersIcon from './icons/IconDaggers.vue';
 import DespairIcon from './icons/IconDespair.vue';
@@ -19,8 +22,10 @@ import FairyIcon from './icons/IconFairy.vue';
 import Fairy2Icon from './icons/IconFairy2.vue';
 import FishMonsterIcon from './icons/IconFishMonster.vue';
 import ForestCampIcon from './icons/IconForestCamp.vue';
+import GiantIcon from './icons/IconGiant.vue';
 import GoblinIcon from './icons/IconGoblin.vue';
 import HealingIcon from './icons/IconHealing.vue';
+import HeartInsideIcon from './icons/IconHeartInside.vue';
 import HighShotIcon from './icons/IconHighShot.vue';
 import InvisibleIcon from './icons/IconInvisible.vue';
 import MagnifyingGlassIcon from './icons/IconMagnifyingGlass.vue';
@@ -54,6 +59,9 @@ defineProps<{
   <BladeDragIcon class="w-100" v-if="isValidIcon && iconType === 'blade-drag'" />
   <ClawSlashesIcon class="w-100" v-if="isValidIcon && iconType === 'claw-slashes'" />
   <ConvinceIcon class="w-100" v-if="isValidIcon && iconType === 'convince'" />
+  <CloverIcon class="w-100" v-if="isValidIcon && iconType === 'clover'" />
+  <Clover2Icon class="w-100" v-if="isValidIcon && iconType === 'clover-2'" />
+  <CowledIcon class="w-100" v-if="isValidIcon && iconType === 'cowled'" />
   <CrossedSwordsIcon class="w-100" v-if="isValidIcon && iconType === 'crossed-swords'" />
   <DaggersIcon class="w-100" v-if="isValidIcon && iconType === 'daggers'" />
   <DespairIcon class="w-100" v-if="isValidIcon && iconType === 'despair'" />
@@ -63,8 +71,10 @@ defineProps<{
   <Fairy2Icon class="w-100" v-if="isValidIcon && iconType === 'fairy-2'" />
   <FishMonsterIcon class="w-100" v-if="isValidIcon && iconType === 'fish-monster'" />
   <ForestCampIcon class="w-100" v-if="isValidIcon && iconType === 'forest-camp'" />
+  <GiantIcon class="w-100" v-if="isValidIcon && iconType === 'giant'" />
   <GoblinIcon class="w-100" v-if="isValidIcon && iconType === 'goblin'" />
   <HealingIcon class="w-100" v-if="isValidIcon && iconType === 'healing'" />
+  <HeartInsideIcon class="w-100" v-if="isValidIcon && iconType === 'heart-inside'" />
   <HighShotIcon class="w-100" v-if="isValidIcon && iconType === 'high-shot'" />
   <PersonIcon class="w-100" v-if="isValidIcon && iconType === 'person'" />
   <SpellBookIcon class="w-100" v-if="isValidIcon && iconType === 'spell-book'" />
