@@ -1,0 +1,28 @@
+{
+  "id": "rogue",
+  "featureType": "class",
+  "name": "Rogue",
+  "featuresByLevel": [
+    {
+      "level": 1,
+      "parentId": "rogue",
+      "features": [
+        {
+          "id": "sneakAttack1d6",
+          "name": "Sneak Attack: 1d6",
+          "actionType": "attack",
+          "parentId": "rogue",
+          "featureType": "class",
+          "level": 1,
+          "order": 0,
+          "description": "You can deal 1d6 additional damage to one creature you hit with an attack.",
+          "usage": "Once per turn",
+          "conditions": [
+            "You must have advantage on the attack roll OR the target is within 5 feet of another non-incapacitated enemy (your ally)"
+          ],
+          "iconType": "hooded-assassin"
+        }
+      ]
+    }
+  ]
+}

@@ -26,6 +26,8 @@ export const IconTypeArray = [
   'healing',
   'heart-inside',
   'high-shot',
+  'hooded-assassin',
+  'hooded-figure',
   'invisible',
   'magnifying-glass',
   'person',

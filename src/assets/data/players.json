@@ -67,5 +67,19 @@
         "playerId": "jude"
       }
     ]
+  },
+  {
+    "id": "chris",
+    "playerName": "Chris",
+    "characterName": "Kaiser Silkenheart",
+    "raceId": "elf",
+    "subRaceId": "woodElf",
+    "classes": [
+      {
+        "classId": "rogue",
+        "level": 1,
+        "playerId": "chris"
+      }
+    ]
   }
 ]

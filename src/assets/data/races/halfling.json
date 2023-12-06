@@ -51,7 +51,7 @@
           "name": "Naturally Stealthy",
           "description": "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you.",
           "usage": "Any time the condition is met",
-          "iconType": "cowled"
+          "iconType": "hooded-figure"
         }
       ]
     },

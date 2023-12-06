@@ -40,7 +40,7 @@
         classes: Data.classes,
         commonActions: Data.commonActions,
         races: Data.races,
-        currentPlayer: Data.players.find(p => p.id === "jude")
+        currentPlayer: Data.players.find(p => p.id === "chris")
       };
     },
     computed: {

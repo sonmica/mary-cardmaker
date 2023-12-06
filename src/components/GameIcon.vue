@@ -29,6 +29,8 @@ import GoblinIcon from './icons/IconGoblin.vue';
 import HealingIcon from './icons/IconHealing.vue';
 import HeartInsideIcon from './icons/IconHeartInside.vue';
 import HighShotIcon from './icons/IconHighShot.vue';
+import HoodedAssassinIcon from './icons/IconHoodedAssassin.vue';
+import HoodedFigureIcon from './icons/IconHoodedFigure.vue';
 import InvisibleIcon from './icons/IconInvisible.vue';
 import MagnifyingGlassIcon from './icons/IconMagnifyingGlass.vue';
 import PersonIcon from './icons/IconPerson.vue';
@@ -82,6 +84,8 @@ defineProps<{
   <HealingIcon class="w-100" v-if="isValidIcon && iconType === 'healing'" />
   <HeartInsideIcon class="w-100" v-if="isValidIcon && iconType === 'heart-inside'" />
   <HighShotIcon class="w-100" v-if="isValidIcon && iconType === 'high-shot'" />
+  <HoodedAssassinIcon class="w-100" v-if="isValidIcon && iconType === 'hooded-assassin'" />
+  <HoodedFigureIcon class="w-100" v-if="isValidIcon && iconType === 'hooded-figure'" />
   <PersonIcon class="w-100" v-if="isValidIcon && iconType === 'person'" />
   <SpartanIcon class="w-100" v-if="isValidIcon && iconType === 'spartan'" />
   <SpellBookIcon class="w-100" v-if="isValidIcon && iconType === 'spell-book'" />
