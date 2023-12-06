@@ -8,6 +8,7 @@ import BackPainIcon from './icons/IconBackPain.vue';
 import BladeDragIcon from './icons/IconBladeDrag.vue';
 import BoltSpellCastIcon from './icons/IconBoltSpellCast.vue';
 import ClawSlashesIcon from './icons/IconClawSlashes.vue';
+import ClickIcon from './icons/IconClick.vue';
 import CloverIcon from './icons/IconClover.vue';
 import Clover2Icon from './icons/IconClover2.vue';
 import ConvinceIcon from './icons/IconConvince.vue';
@@ -37,6 +38,7 @@ import PersonIcon from './icons/IconPerson.vue';
 import PianistIcon from './icons/IconPianist.vue';
 import PlayerTimeIcon from './icons/IconPlayerTime.vue';
 import PullIcon from './icons/IconPull.vue';
+import PsychicWavesIcon from './icons/IconPsychicWaves.vue';
 import PyromaniacIcon from './icons/IconPyromaniac.vue';
 import ShieldBashIcon from './icons/IconShieldBash.vue';
 import SpartanIcon from './icons/IconSpartan.vue';
@@ -64,9 +66,10 @@ defineProps<{
   <BackPainIcon class="w-100" v-if="isValidIcon && iconType === 'back-pain'" />
   <BladeDragIcon class="w-100" v-if="isValidIcon && iconType === 'blade-drag'" />
   <ClawSlashesIcon class="w-100" v-if="isValidIcon && iconType === 'claw-slashes'" />
-  <ConvinceIcon class="w-100" v-if="isValidIcon && iconType === 'convince'" />
+  <ClickIcon class="w-100" v-if="isValidIcon && iconType === 'click'" />
   <CloverIcon class="w-100" v-if="isValidIcon && iconType === 'clover'" />
   <Clover2Icon class="w-100" v-if="isValidIcon && iconType === 'clover-2'" />
+  <ConvinceIcon class="w-100" v-if="isValidIcon && iconType === 'convince'" />
   <CowledIcon class="w-100" v-if="isValidIcon && iconType === 'cowled'" />
   <CrossedSwordsIcon class="w-100" v-if="isValidIcon && iconType === 'crossed-swords'" />
   <DaggersIcon class="w-100" v-if="isValidIcon && iconType === 'daggers'" />
@@ -87,6 +90,7 @@ defineProps<{
   <HoodedAssassinIcon class="w-100" v-if="isValidIcon && iconType === 'hooded-assassin'" />
   <HoodedFigureIcon class="w-100" v-if="isValidIcon && iconType === 'hooded-figure'" />
   <PersonIcon class="w-100" v-if="isValidIcon && iconType === 'person'" />
+  <PsychicWavesIcon class="w-100" v-if="isValidIcon && iconType === 'psychic-waves'" />
   <SpartanIcon class="w-100" v-if="isValidIcon && iconType === 'spartan'" />
   <SpellBookIcon class="w-100" v-if="isValidIcon && iconType === 'spell-book'" />
   <SpikedDragonHeadIcon class="w-100" v-if="isValidIcon && iconType === 'spiked-dragon-head'" />

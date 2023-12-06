@@ -1,0 +1,40 @@
+{
+  "id": "paladin",
+  "featureType": "class",
+  "name": "Paladin",
+  "featuresByLevel": [
+    {
+      "level": 1,
+      "parentId": "paladin",
+      "features": [
+        {
+          "id": "divineSense",
+          "name": "Divine Sense",
+          "actionType": "action",
+          "parentId": "paladin",
+          "featureType": "class",
+          "level": 1,
+          "order": 0,
+          "description": "You can open your awareness to detect strong evil forces. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover. You know the type of the being whose presence you sense, but not its identity.",
+          "usage": "1 + [CHA modifier] uses per long rest",
+          "iconType": "psychic-waves"
+        },
+        {
+          "id": "layOnHands",
+          "name": "Lay on Hands",
+          "actionType": "action",
+          "parentId": "paladin",
+          "featureType": "class",
+          "level": 1,
+          "order": 1,
+          "description": "Touch a creature to restore a number of hit points to that creature by drawing power from a pool of hit points. Alternatively you can expend 5 hit points from the pool to cure the target of one disease or neutralize one poison affecting it.",
+          "usage": "Up to maximum number of hit points equal to Paladin level x 5, replenished after a long rest",
+          "conditions": [
+            "Must be able to touch the target"
+          ],
+          "iconType": "click"
+        }
+      ]
+    }
+  ]
+}

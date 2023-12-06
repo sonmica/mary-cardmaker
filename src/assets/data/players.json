@@ -81,5 +81,18 @@
         "playerId": "chris"
       }
     ]
+  },
+  {
+    "id": "wil",
+    "playerName": "Wil",
+    "characterName": "Brozar",
+    "raceId": "halfOrc",
+    "classes": [
+      {
+        "classId": "paladin",
+        "level": 1,
+        "playerId": "wil"
+      }
+    ]
   }
 ]
