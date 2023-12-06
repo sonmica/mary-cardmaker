@@ -53,5 +53,19 @@
         "playerId": "gab"
       }
     ]
+  },
+  {
+    "id": "jude",
+    "playerName": "Jude",
+    "characterName": "ShenronV2",
+    "raceId": "dragonborn",
+    "subRaceId": "brassDragonAncestryDragonborn",
+    "classes": [
+      {
+        "classId": "barbarian",
+        "level": 1,
+        "playerId": "jude"
+      }
+    ]
   }
 ]

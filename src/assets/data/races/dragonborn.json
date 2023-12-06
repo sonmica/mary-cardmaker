@@ -1,25 +1,37 @@
 {
+  "id": "dragonborn",
   "featureType": "race",
   "name": "Dragonborn",
   "size": "Medium",
   "speed": 30,
   "features": [
     {
+      "id": "draconicAncestry",
+      "parentId": "dragonborn",
+      "featureType": "race",
       "actionType": "passive",
       "name": "Draconic Ancestry",
       "description": "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the damage type chosen.",
-      "usage": "Passive"
+      "usage": "Passive",
+      "iconType": "spiked-dragon-head"
     }
   ],
   "subRaces": [
     {
+      "id": "brassDragonAncestryDragonborn",
+      "parentId": "dragonborn",
+      "featureType": "race",
       "name": "Brass Dragon Ancestry",
       "features": [
         {
+          "id": "breathWeaponBrass",
+          "parentId": "brassDragonAncestryDragonborn",
+          "featureType": "race",
           "actionType": "action",
-          "name": "Breath Weapon - Brass",
+          "name": "Breath Weapon: Brass",
           "description": "You can use your action to exhale destructive energy. Your brass draconic ancestry means this exhalation is a 5 by 30 ft. line dealing fire damage.",
-          "usage": "Once per short or long rest"
+          "usage": "Once per short or long rest",
+          "iconType": "dragon-breath"
         }
       ]
     }

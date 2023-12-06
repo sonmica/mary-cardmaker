@@ -1,0 +1,43 @@
+{
+  "id": "barbarian",
+  "featureType": "class",
+  "name": "Barbarian",
+  "featuresByLevel": [
+    {
+      "level": 1,
+      "parentId": "barbarian",
+      "features": [
+        {
+          "id": "rage",
+          "name": "Rage",
+          "actionType": "bonusAction",
+          "parentId": "barbarian",
+          "featureType": "class",
+          "level": 1,
+          "order": 0,
+          "description": "Enter into a state of primal ferocity. While raging, you have advantage on Strength checks and saving throws. When you make a melee weapon attack using Strength, you gain a bonus to the damage roll. You have resistance to bludgeoning, piercing, and slashing damage. You can end the rage early as a bonus action.",
+          "usage": "Two per short or long rest",
+          "conditions": [
+            "Must not be wearing heavy armor",
+            "Must not be concentrating on a spell",
+            "Must not be knocked unconcious (or the rage ends early)",
+            "Must attack a hostile creature or take damage at least once per turn (or the rage ends early)"
+          ],
+          "iconType": "enrage"
+        },
+        {
+          "id": "unarmoredDefense",
+          "name": "Unarmored Defense",
+          "actionType": "passive",
+          "parentId": "barbarian",
+          "featureType": "class",
+          "level": 1,
+          "order": 1,
+          "description": "While you are not wearing any armor, your Armor Class equals 10 + [DEX modifier] + [CON modifer]. You can use a shield and still gain this benefit.",
+          "usage": "passive",
+          "iconType": "spartan"
+        }      
+      ]
+    }
+  ]
+}

@@ -81,6 +81,7 @@ export default {
     },
     methods: {
       subText: function(feature: Feature) {
+        console.log(`feature ${feature.id}`, feature);
         // combine: ActionType, Usage, Conditions, Source, SpellInfo
         const subTextArray = [];
         subTextArray.push(`Action Type: ${feature.actionType.toString().toUpperCase()}`);

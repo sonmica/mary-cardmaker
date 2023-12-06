@@ -16,7 +16,9 @@ import CrossedSwordsIcon from './icons/IconCrossedSwords.vue';
 import DaggersIcon from './icons/IconDaggers.vue';
 import DespairIcon from './icons/IconDespair.vue';
 import DivertIcon from './icons/IconDivert.vue';
+import DragonBreathIcon from './icons/IconDragonBreath.vue';
 import EgyptianWalkIcon from './icons/IconEgyptianWalk.vue';
+import EnrageIcon from './icons/IconEnrage.vue';
 import ExtraTimeIcon from './icons/IconExtraTime.vue';
 import FairyIcon from './icons/IconFairy.vue';
 import Fairy2Icon from './icons/IconFairy2.vue';
@@ -35,8 +37,10 @@ import PlayerTimeIcon from './icons/IconPlayerTime.vue';
 import PullIcon from './icons/IconPull.vue';
 import PyromaniacIcon from './icons/IconPyromaniac.vue';
 import ShieldBashIcon from './icons/IconShieldBash.vue';
+import SpartanIcon from './icons/IconSpartan.vue';
 import SpellBookIcon from './icons/IconSpellBook.vue';
 import SparkSpiritIcon from './icons/IconSparkSpirit.vue';
+import SpikedDragonHeadIcon from './icons/IconSpikedDragonHead.vue';
 import SunglassesIcon from './icons/IconSunglasses.vue';
 import SurprisedIcon from './icons/IconSurprised.vue';
 import SwordClashIcon from './icons/IconSwordClash.vue';
@@ -66,6 +70,8 @@ defineProps<{
   <DaggersIcon class="w-100" v-if="isValidIcon && iconType === 'daggers'" />
   <DespairIcon class="w-100" v-if="isValidIcon && iconType === 'despair'" />
   <DivertIcon class="w-100" v-if="isValidIcon && iconType === 'divert'" />
+  <DragonBreathIcon class="w-100" v-if="isValidIcon && iconType === 'dragon-breath'" />
+  <EnrageIcon class="w-100" v-if="isValidIcon && iconType === 'enrage'" />
   <ExtraTimeIcon class="w-100" v-if="isValidIcon && iconType === 'extra-time'" />
   <FairyIcon class="w-100" v-if="isValidIcon && iconType === 'fairy'" />
   <Fairy2Icon class="w-100" v-if="isValidIcon && iconType === 'fairy-2'" />
@@ -77,7 +83,9 @@ defineProps<{
   <HeartInsideIcon class="w-100" v-if="isValidIcon && iconType === 'heart-inside'" />
   <HighShotIcon class="w-100" v-if="isValidIcon && iconType === 'high-shot'" />
   <PersonIcon class="w-100" v-if="isValidIcon && iconType === 'person'" />
+  <SpartanIcon class="w-100" v-if="isValidIcon && iconType === 'spartan'" />
   <SpellBookIcon class="w-100" v-if="isValidIcon && iconType === 'spell-book'" />
+  <SpikedDragonHeadIcon class="w-100" v-if="isValidIcon && iconType === 'spiked-dragon-head'" />
   <SwordwomanIcon class="w-100" v-if="isValidIcon && iconType === 'swordwoman'" />
   <BoltSpellCastIcon class="w-100" v-if="isValidIcon && iconType === 'bolt-spell-cast'" />
   <ShieldBashIcon class="w-100" v-if="isValidIcon && iconType === 'shield-bash'" />
