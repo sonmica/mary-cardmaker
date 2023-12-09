@@ -32,7 +32,10 @@ import HeartInsideIcon from './icons/IconHeartInside.vue';
 import HighShotIcon from './icons/IconHighShot.vue';
 import HoodedAssassinIcon from './icons/IconHoodedAssassin.vue';
 import HoodedFigureIcon from './icons/IconHoodedFigure.vue';
+import HornedSkullIcon from './icons/IconHornedSkull.vue';
+import IceSpellCastIcon from './icons/IconIceSpellCast.vue';
 import InvisibleIcon from './icons/IconInvisible.vue';
+import LifeBarIcon from './icons/IconLifeBar.vue';
 import MagnifyingGlassIcon from './icons/IconMagnifyingGlass.vue';
 import PersonIcon from './icons/IconPerson.vue';
 import PianistIcon from './icons/IconPianist.vue';
@@ -89,6 +92,9 @@ defineProps<{
   <HighShotIcon class="w-100" v-if="isValidIcon && iconType === 'high-shot'" />
   <HoodedAssassinIcon class="w-100" v-if="isValidIcon && iconType === 'hooded-assassin'" />
   <HoodedFigureIcon class="w-100" v-if="isValidIcon && iconType === 'hooded-figure'" />
+  <HornedSkullIcon class="w-100" v-if="isValidIcon && iconType === 'horned-skull'" />
+  <IceSpellCastIcon class="w-100" v-if="isValidIcon && iconType === 'ice-spell-cast'" />
+  <LifeBarIcon class="w-100" v-if="isValidIcon && iconType === 'life-bar'" />
   <PersonIcon class="w-100" v-if="isValidIcon && iconType === 'person'" />
   <PsychicWavesIcon class="w-100" v-if="isValidIcon && iconType === 'psychic-waves'" />
   <SpartanIcon class="w-100" v-if="isValidIcon && iconType === 'spartan'" />

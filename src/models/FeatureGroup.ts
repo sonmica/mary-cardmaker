@@ -10,6 +10,7 @@ export interface FeatureGroup {
   featuresByLevel?: FeatureByLevel[];
   features?: Feature[];
   subRaces?: FeatureGroup[];
+  // TODO: Add subclassFeatures
 }
 
 export interface FeatureByLevel {

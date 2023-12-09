@@ -1,0 +1,51 @@
+{
+  "id": "warlock",
+  "featureType": "class",
+  "name": "Warlock",
+  "featuresByLevel": [
+    {
+      "level": 1,
+      "parentId": "warlock",
+      "features": [
+        {
+          "id": "otherworldlyPatron",
+          "name": "Otherworldly Patron",
+          "actionType": "passive",
+          "parentId": "warlock",
+          "featureType": "class",
+          "level": 1,
+          "order": 0,
+          "description": "You have struck a bargain with an otherworldly being of your choice: the Archfey, the Fiend, or the Great Old One. Your choice grants you features at 1st level, and again at 6th, 10th, and 14th level.",
+          "usage": "Passive",
+          "iconType": "horned-skull"
+        },
+        {
+          "id": "pactMagic",
+          "name": "Pact Magic",
+          "actionType": "passive",
+          "parentId": "warlock",
+          "featureType": "class",
+          "level": 1,
+          "order": 1,
+          "description": "Your arcane research and the magic bestowed on you by your patron grant you the ability to cast spells, as per the general spellcasting rules and using spells from the warlock spell list.",
+          "usage": "Passive",
+          "iconType": "ice-spell-cast"
+        }
+      ],
+      "subFeatures": [
+        {
+          "id": "darkOnesBlessing",
+          "name": "Warlock: The Fiend",
+          "actionType": "passive",
+          "parentId": "warlock",
+          "featureType": "class",
+          "level": 1,
+          "order": 0,
+          "description": "When you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your [CHA modifier] + your warlock level (minimum of 1).",
+          "usage": "Passive",
+          "iconType": "life-bar"
+        }
+      ]
+    }
+  ]
+}

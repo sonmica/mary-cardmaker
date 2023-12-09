@@ -94,5 +94,19 @@
         "playerId": "wil"
       }
     ]
+  },
+  {
+    "id": "miguel",
+    "playerName": "Miguel",
+    "characterName": "King Mukla",
+    "raceId": "tiefling",
+    "classes": [
+      {
+        "classId": "warlock",
+        "level": 1,
+        "playerId": "miguel",
+        "subClassFeature": "darkOnesBlessing"
+      }
+    ]
   }
 ]
