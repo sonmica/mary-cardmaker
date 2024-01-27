@@ -2,6 +2,7 @@
   import CompactContentSection from './CompactContentSection.vue';
   import ContentSection from './ContentSection.vue';
   import LeftRightContentSection from './LeftRightContentSection.vue';
+  import CharacterDropdown from './CharacterDropdown.vue';
   import FeatureGroupSection from './FeatureGroupSection.vue';
 
   import Data from '@/assets/data/Data';
@@ -20,6 +21,8 @@
     </div>
 
     <LeftRightContentSection sectionTitle="Common actions" :section="commonActionsSection" twoColumn :leftColumnIds="['attack']"/>
+
+    <CharacterDropdown :player-list="characterDropdownList"/>
 
     <FeatureGroupSection
       :section-title="`Features for: ${currentPlayer?.characterName}`"
@@ -52,6 +55,11 @@
       },
       commonActionsSection: function(): Section {
         return this.commonActions.find((c: any) => c.id === "commonActions") as Section;
+      },
+      characterDropdownList: function(): {title: string, value: string}[] {
+        return Data.players.map(p => {
+          return {title: p.playerName, value: p.id}
+        }).sort((a, b) => a.title > b.title ? 1 : -1);
       },
       moreActionsSection: function(): Section {
         return this.commonActions.find((c: any) => c.id === "moreActions") as Section;
