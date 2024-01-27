@@ -8,11 +8,11 @@
   import Data from '@/assets/data/Data';
   import type Feature from '@/models/Feature';
   import type Section from '@/models/Section';
+import type Player from '@/models/Player';
 </script>
 
 <template>    
   <div class="d-flex flex-column gap-3">
-    <div>{{ $route.params }}</div>
     <div class="text-center">
       <h1 class="text-uppercase">Quick Reference</h1>
     </div>
@@ -44,10 +44,16 @@
         classes: Data.classes,
         commonActions: Data.commonActions,
         races: Data.races,
-        currentPlayer: Data.players.find(p => p.id === "miguel")
       };
     },
     computed: {
+      currentPlayerName: function(): string {
+        return this.$route.params.playerName as string ?? "cameron"
+      },
+      currentPlayer: function (): Player {
+        console.log("this.currentPlayerName", this.currentPlayerName)
+        return Data.players.find(p => p.id === this.currentPlayerName) ?? Data.players[0];
+      },
       onYourTurnSection: function(): Section {
         return this.commonActions.find((c: any) => c.id === "onYourTurn") as Section;
       },

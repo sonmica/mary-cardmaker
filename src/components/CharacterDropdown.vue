@@ -5,7 +5,7 @@
     </button>
     <ul class="dropdown-menu">
       <li v-for="(player, i) in playerList" :key="i">
-        <a class="dropdown-item" href="#">{{ player.title }}</a>
+        <a class="dropdown-item" :href="`/${player.value}`">{{ player.title }}</a>
       </li>
     </ul>
   </div>
