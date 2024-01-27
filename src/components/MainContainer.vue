@@ -12,6 +12,7 @@
 
 <template>    
   <div class="d-flex flex-column gap-3">
+    <div>{{ $route.params }}</div>
     <div class="text-center">
       <h1 class="text-uppercase">Quick Reference</h1>
     </div>
